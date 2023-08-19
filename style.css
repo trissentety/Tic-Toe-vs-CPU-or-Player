@@ -1,0 +1,176 @@
+#divsec1, #divsec2, #divsec3 {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+#div1, #div2, #div3, #div4, #div5, #div6, #div7, #div8, #div9 {
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+    background-color: grey;
+    place-items: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    box-shadow: 10px 10px 10px 10px #1c1c1c; 
+    
+} 
+#div1:hover, #div2:hover, #div3:hover, #div4:hover, #div5:hover, #div6:hover, #div7:hover, #div8:hover, #div9:hover {
+    background-color: rgb(146, 146, 146);
+} 
+
+
+
+body {
+    background-color: rgb(40, 40, 40);
+    font-family: cursive;
+    color: yellow;
+}
+
+h2, h1 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+#buttoncon {
+    display: flex;
+    justify-content: flex-start;
+}
+
+h3 {
+    text-align: right;
+    margin-left: 300px;
+
+}
+
+
+
+#prompt, #prompt1 #prompt2, #prompt3, #winner{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+#scoreString {
+    display: flex;
+    justify-content: center;
+    width: 210px;
+    height: 300px;
+    font-size: 20px;
+    color: grey;
+    background-color: black;
+    margin-top: 10px;
+}
+
+#btn {
+    height: 30px;
+    width: 200px;
+    border: 3px solid rgb(141, 13, 141);
+    border-radius: 15px;
+    margin: 20px; 
+    font-weight: bold;
+} 
+
+#btn3, #btn4, #btn5, #btn6, #btn7{
+    height: 30px;
+    width: 200px;
+    border: 3px solid rgb(141, 13, 141);
+    border-radius: 15px;
+    margin: 7px; 
+    background-color: grey;
+    font-weight: bold;
+    font-family: arial;
+    margin-top: 19px;
+}
+
+#btn3:hover, #btn4:hover, #btn5:hover, #btn6:hover, #btn7:hover{
+
+    border: 3px solid rgb(141, 13, 141);
+    border-radius: 15px;
+
+    background-color: rgb(177, 177, 177);
+}
+
+#btn5, #btn6, #btn8 {
+    display: none; /*seperate vs buttons. keeps code running */
+}
+
+
+#padding {
+    width: 500px;
+    height: 50px;
+}
+
+#player2 {
+    font-size: 30px;
+    text-align: center;
+    padding: 0 150px 0 150px;
+}
+
+#player2score {
+    padding: 150px;
+    font-size: 20px;
+    float: right;
+    color: rgb(148, 148, 148);
+    text-align: center;
+}
+
+#player1score {
+    padding: 150px;
+    font-size: 20px;
+    float: left;
+    color: rgb(148, 148, 148);
+    text-align: center;
+}
+
+#winner {
+    font-size: 100px;
+    color: silver;
+}
+
+.hover:hover {
+    background-color:grey;
+}
+
+#scoreString {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+#div4sec1, #div4sec2, #div4sec3, #div4sec4, #divsec1mm, #divsec2mm, #divsec3mm {
+    display: none;
+    justify-content: center;
+    font-size: 30px;
+    background-color: rgb(146, 146, 146);
+}
+
+#div1mm, #div2mm, #div3mm, #div4mm, #div5mm, #div6mm, #div7mm, #div8mm, #div9mm, #ddiv1, #ddiv2, #ddiv3, #ddiv4, #ddiv5, #ddiv6, #ddiv7, #ddiv8, #ddiv9, #ddiv10, #ddiv11, #ddiv12, #ddiv13, #ddiv14, #ddiv15, #ddiv16 {
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+    background-color: grey;
+    place-items: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    box-shadow: 10px 10px 10px 10px #1c1c1c; 
+    
+} 
+#ddiv1:hover, #ddiv2:hover, #ddiv3:hover, #ddiv4:hover, #ddiv5:hover, #ddiv6:hover, #ddiv7:hover, #ddiv8:hover, #ddiv9:hover, #ddiv10:hover, #ddiv11:hover, #ddiv12:hover, #ddiv13:hover, #ddiv14:hover, #ddiv15:hover, #ddiv16:hover   {
+    background-color: rgb(146, 146, 146);
+    border: 2px outset grey;
+    cursor: pointer;
+} 
