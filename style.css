@@ -130,6 +130,7 @@ h3 {
 #winner {
     font-size: 60px;
     color: silver;
+    display: none;
 }
 
 .hover:hover {
