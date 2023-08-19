@@ -46,7 +46,7 @@
       <div id="ddiv15"><p></p></div>
       <div id="ddiv16"><p></p></div>
     </div>
-    <div id="winner"><p></p></div>
+    
     <div id="divsec1">
         <div id="div1"><p></p></div>
         <div id="div2"><p></p></div>
@@ -63,6 +63,7 @@
         <div id="div8"><p></p></div>
         <div id="div9"><p></p></div>
     </div>
+    <div id="winner"><p></p></div>
     
     <div id="divsec1mm">
       <div id="div1mm"><p></p></div>
@@ -146,6 +147,7 @@
                 ddiv14.style.pointerEvents = "none";
                 ddiv15.style.pointerEvents = "none";
                 ddiv16.style.pointerEvents = "none";
+                document.getElementById("winner").style.display = "flex";
             }
 
             function tie() {
@@ -213,7 +215,6 @@
                         ddiv14.innerHTML = "";
                         ddiv15.innerHTML = "";
                         ddiv16.innerHTML = "";
-
                         document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
                         letterArray.splice(0,9,0,0,0,0,0,0,0,0,0)
                         letterArray2.splice(0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
