@@ -913,1455 +913,6 @@ var myTimeout = setTimeout( function() {
 
 
 
-
-
-   var btn5 = document.getElementById("btn5");
-    var btnclick2 = 1;
-          btn5.onclick = function() {
-             btnclick2++;
-             if (btnclick2 % 2 == 0) {
-               btn5.innerHTML = "VS Player"
-               opponent.innerHTML = "Opponent: Airialle";
-                cpuTurn();  
-             } else {
-               btn5.innerHTML = "VS CPU - Airialle (Hard)";
-               opponent.innerHTML = "Opponent: Player 2";
-          }
-    };
-
-    var btn6 = document.getElementById("btn6");
-    var btnclick3 = 1;
-          btn6.onclick = function() {
-             btnclick3++;
-             if (btnclick3 % 2 == 0) {
-               btn6.innerHTML = "VS Player"
-               opponent.innerHTML = "Opponent: Mark";
-                cpuMTurn();  
-             } else {
-               btn6.innerHTML = "VS CPU Mark (Normal)";
-               opponent.innerHTML = "Opponent: Player 2";
-          }
-    };
-
-    var btn8 = document.getElementById("btn8");
-    var btnclick8 = 1;
-          btn8.onclick = function() {
-             btnclick8++;
-             if (btnclick8 % 2 == 0) {
-               btn8.innerHTML = "VS Player"
-               opponent.innerHTML = "Opponent: Mark";
-                easyPlayer();  
-             } else {
-               btn8.innerHTML = "VS CPU Mark (Normal)";
-               opponent.innerHTML = "Opponent: Player 2";
-          }
-    };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            function scoreReset() {
-               if (player2Score === 5) {
-                  player2Score = 0;
-                  player2score.innerHTML = `Player 1's Score: <br> ${player2Score}`;
-                  player1Score = 0;
-                  player1score.innerHTML = `Player 2's Score: <br> ${player1Score}`;
-                  var myTimeout = setTimeout( function () {
-                     document.getElementById("newDiv").innerHTML = "";
-                  }, 3000)
-               }
-               if (player1Score === 5) {
-                  player1Score = 0;
-                  player1score.innerHTML = `Player 1's Score: <br> ${player1Score}`;
-                  player2Score = 0;
-                  player2score.innerHTML = `Player 2's Score: <br> ${player2Score}`;
-                  document.getElementById("newDiv").innerHTML = "First to 5 points wins.";
-                  var myTimeout = setTimeout( function () {
-                     document.getElementById("newDiv").innerHTML = "";
-                  }, 3000)
-               }
-            }
-
-            var displayReplay = 0;
-            document.getElementById("prompt").addEventListener("click", function () {
-               displayReplay++;
-               if (displayReplay % 2 == 0) {
-                  document.getElementById("scoreString").style.display = "unset";
-               } else {
-                  document.getElementById("scoreString").style.display = "none";
-               }
-
-
-         })
-         document.getElementById("prompt").addEventListener("mouseover", function () {
-            document.getElementById("prompt").style.cursor = "pointer";
-         })
-           
-
-
-
-
-
-
-
-        var currentLetter = 0;
-        if (currentLetter % 2 == 0) {
-            player2s.innerHTML="Player 2's turn";
-        }else {
-            player2s.innerHTML="Player 1's turn";
-        }
-        function boss() {
-            
-            
-
-
-      
-            
-
-
-
-            function cpuTurn () {
-               
-    currentLetter++;
-    var slot = Math.ceil(Math.random() * 9);
-    console.log(slot)
-    var slot2 = Math.ceil(Math.random() * 9);
-      //   if (slot2 > 7) {
-            switch (slot) {
-            case 1:
-                if (slot = 1 & letterArray[0] === 2 & letterArray[1] === 2 & letterArray[2] === 0 ) {
-                    div3.innerHTML = "O"
-                    letterArray.splice(2,1,2);
-                    div3.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    break;
-                }
-            case 2:
-                if (slot = 1 & letterArray[0] === 2 & letterArray[3] === 2 & letterArray[6] == 0 ) {
-                    div7.innerHTML = "O"
-                    letterArray.splice(6,1,2);
-                    div7.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    break;
-                }
-            case 3:
-                if (slot = 1 & letterArray[0] === 2 & letterArray[4] === 2 & letterArray[8] === 0 ) {
-                    div9.innerHTML = "O"
-                    div9.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(8,1,2);
-                    break;
-                }  
-                
-                
-            case 4:
-                if (slot = 1 & letterArray[1] === 2 & letterArray[4] === 2 & letterArray[7] === 0 ) {
-                    div8.innerHTML = "O"
-                    div8.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(7,1,2);
-                    break;
-                }
-            case 5:
-                if (slot = 1 & letterArray[0] === 0 & letterArray[1] === 2 & letterArray[2] === 2 ) {
-                    div3.innerHTML = "O"
-                    div3.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(0,1,2);
-                    break;
-                }
-            case 6:
-                if (slot = 1 & letterArray[2] === 2 & letterArray[5] === 2 & letterArray[8] === 0 ) {
-                    div9.innerHTML = "O"
-                    div9.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(8,1,2);
-                    break;
-                }
-                
-                
-            case 7:
-                if (slot = 1 & letterArray[0] === 0 & letterArray[3] === 2 & letterArray[6] === 2 ) {
-                    div1.innerHTML = "O"
-                    div1.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(0,1,2);
-                    break;
-                }
-            case 8:
-                if (slot = 1 & letterArray[6] === 2 & letterArray[4] === 2 & letterArray[2] === 0 ) {
-                    div3.innerHTML = "O"
-                    div3.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(2,1,2);
-                    break;
-                }
-            case 9:
-                if (slot = 1 & letterArray[6] === 2 & letterArray[7] === 2 & letterArray[8] === 0 ) {
-                    div9.innerHTML = "O"
-                    div9.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(8,1,2);
-                    break;
-                }
-
-
-            case 10:
-                if (slot = 1 & letterArray[7] === 2 & letterArray[4] === 2 & letterArray[1] === 0 ) {
-                    div3.innerHTML = "O"
-                    div3.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(2,1,2);
-                    break;
-                }
-            case 11:
-                if (slot = 1 & letterArray[3] == 2 & letterArray[4] == 2 & letterArray[5] == 0 ) {
-                    div6.innerHTML = "O"
-                    div6.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(5,1,2);
-                    break;
-                }
-            case 12:
-                if (slot = 1 & letterArray[3] === 0 & letterArray[4] === 2 & letterArray[5] === 2 ) {
-                    div4.innerHTML = "O"
-                    div4.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(3,1,2);
-                    break;
-                }
-
-
-            case 13:
-                if (slot = 1 & letterArray[6] === 0 & letterArray[7] === 2 & letterArray[8] === 2 ) {
-                    div7.innerHTML = "O"
-                    div7.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(6,1,2);
-                    break;
-                }
-            case 14:
-                if (slot = 1 & letterArray[8] === 2 & letterArray[4] === 2 & letterArray[0] === 0 ) {
-                    div1.innerHTML = "O"
-                    div1.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(0,1,2);
-                    break;
-                }
-            case 15:
-                if (slot = 1 & letterArray[8] === 2 & letterArray[5] === 2 & letterArray[2] === 0 ) {
-                    div3.innerHTML = "O"
-                    div3.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(2,1,2);
-                    break;
-                }
-
-
-            case 16:
-                if (slot = 1 & letterArray[0] == 2 & letterArray[1] == 0 & letterArray[2] == 2 ) {
-                    div2.innerHTML = "O"
-                    div2.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(1,1,2);
-                    break;
-                }
-            case 17:
-                if (slot = 1 & letterArray[0] === 2 & letterArray[3] === 0 & letterArray[6] === 2 ) {
-                    div4.innerHTML = "O"
-                    div4.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(3,1,2);
-                    break;
-                }
-            case 18:
-                if (slot = 1 & letterArray[6] === 2 & letterArray[7] === 0 & letterArray[8] === 2 ) {
-                    div8.innerHTML = "O"
-                    div8.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(7,1,2);
-                    break;
-                }
-            case 19:
-                if (slot = 1 & letterArray[8] === 2 & letterArray[5] === 0 & letterArray[2] === 2 ) {
-                    div6.innerHTML = "O"
-                    div6.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(5,1,2);
-                    break;
-                }
-            case 20:
-               if (slot = 1 & letterArray[6] === 2 & letterArray[4] === 0 & letterArray[2] === 2 ) {
-                  div5.innerHTML = "O"
-                  div5.style.pointerEvents = "none";
-                  winner.innerHTML = "O Wins";
-                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                  freezer();
-                  player2Score++;
-                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                  var myTimeout = setTimeout(function () {resetter()}, 5000);
-                  letterArray.splice(4,1,2);
-                  break;
-               }
-            case 21:
-               if (slot = 1 & letterArray[6] == 0 & letterArray[4] === 2 & letterArray[2] === 2 ) {
-                  div6.innerHTML = "O"
-                  div6.style.pointerEvents = "none";
-                  winner.innerHTML = "O Wins";
-                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                  freezer();
-                  player2Score++;
-                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                  var myTimeout = setTimeout(function () {resetter()}, 5000);
-                  letterArray.splice(6,1,2);
-                  break;
-               }
-               case 22:
-               if (slot = 1 & letterArray[0] === 2 & letterArray[4] === 0 & letterArray[8] === 2 ) {
-                  div5.innerHTML = "O"
-                  div5.style.pointerEvents = "none";
-                  winner.innerHTML = "O Wins";
-                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                  freezer();
-                  player2Score++;
-                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                  var myTimeout = setTimeout(function () {resetter()}, 5000);
-                  letterArray.splice(4,1,2);
-                  break;
-               }
-               case 23:
-               if (slot = 1 & letterArray[0] === 0 & letterArray[4] === 2 & letterArray[8] === 2 ) {
-                  div1.innerHTML = "O"
-                  div1.style.pointerEvents = "none";
-                  winner.innerHTML = "O Wins";
-                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                  freezer();
-                  player2Score++;
-                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                  var myTimeout = setTimeout(function () {resetter()}, 5000);
-                  letterArray.splice(0,1,2);
-                  break;
-               }
-               case 24:
-               if (letterArray[1] == 0 & letterArray[4] == 2 & letterArray[7] == 2 ) {
-                  div2.innerHTML = "O"
-                  div2.style.pointerEvents = "none";
-                  winner.innerHTML = "O Wins";
-                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                  freezer();
-                  player2Score++;
-                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                  var myTimeout = setTimeout(function () {resetter()}, 5000);
-                  letterArray.splice(1,1,2);
-                  break;
-               }
-               case 25:
-               if (slot = 1 & letterArray[1] === 2 & letterArray[4] === 0 & letterArray[7] === 2 ) {
-                  div5.innerHTML = "O"
-                  div5.style.pointerEvents = "none";
-                  winner.innerHTML = "O Wins";
-                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                  freezer();
-                  player2Score++;
-                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                  var myTimeout = setTimeout(function () {resetter()}, 5000);
-                  letterArray.splice(4,1,2);
-                  break;
-               }
-
-
-
-
-               case 1:
-                if (slot = 1 & letterArray[0] === 1 & letterArray[1] === 1 & letterArray[2] === 0 ) {
-                    div3.innerHTML = "O"
-                    letterArray.splice(2,1,2);
-                    div3.style.pointerEvents = "none";
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 2:
-                if (slot = 1 & letterArray[0] === 1 & letterArray[3] === 1 & letterArray[6] == 0 ) {
-                    div7.innerHTML = "O"
-                    letterArray.splice(6,1,2);
-                    div7.style.pointerEvents = "none";
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 3:
-                if (slot = 1 & letterArray[0] === 1 & letterArray[4] === 1 & letterArray[8] === 0 ) {
-                    div9.innerHTML = "O"
-                    div9.style.pointerEvents = "none";
-                    letterArray.splice(8,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }  
-                
-                
-            case 4:
-                if (slot = 1 & letterArray[1] == 1 & letterArray[4] == 1 & letterArray[7] == 0 ) {
-                    div8.innerHTML = "O"
-                    div8.style.pointerEvents = "none";
-                    letterArray.splice(7,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 5:
-                if (slot = 1 & letterArray[0] === 0 & letterArray[1] === 1 & letterArray[2] === 1 ) {
-                    div3.innerHTML = "O"
-                    div3.style.pointerEvents = "none";
-                    letterArray.splice(0,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 6:
-                if (slot = 1 & letterArray[2] === 1 & letterArray[5] === 1 & letterArray[8] === 0 ) {
-                    div9.innerHTML = "O"
-                    div9.style.pointerEvents = "none";
-                    letterArray.splice(8,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-                
-                
-            case 7:
-                if (slot = 1 & letterArray[0] === 0 & letterArray[3] === 1 & letterArray[6] === 1 ) {
-                    div1.innerHTML = "O"
-                    div1.style.pointerEvents = "none";
-                    letterArray.splice(0,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 8:
-                if (slot = 1 & letterArray[6] === 1 & letterArray[4] === 1 & letterArray[2] === 0 ) {
-                    div3.innerHTML = "O"
-                    div3.style.pointerEvents = "none";
-                    letterArray.splice(2,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 9:
-                if (slot = 1 & letterArray[6] === 1 & letterArray[7] === 1 & letterArray[8] === 0 ) {
-                    div9.innerHTML = "O"
-                    div9.style.pointerEvents = "none";
-                    letterArray.splice(8,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-
-
-            case 10:
-                if (slot = 1 & letterArray[7] == 1 & letterArray[4] == 1 & letterArray[1] == 0 ) {
-                    div2.innerHTML = "O"
-                    div2.style.pointerEvents = "none";
-                    letterArray.splice(1,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 11:
-                if (slot = 1 & letterArray[3] === 1 & letterArray[4] === 1 & letterArray[5] === 0 ) {
-                    div6.innerHTML = "O"
-                    div6.style.pointerEvents = "none";
-                    letterArray.splice(5,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 12:
-                if (slot = 1 & letterArray[3] === 0 & letterArray[4] === 1 & letterArray[5] === 1 ) {
-                    div4.innerHTML = "O"
-                    div4.style.pointerEvents = "none";
-                    letterArray.splice(3,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-
-
-            case 13:
-                if (slot = 1 & letterArray[6] == 0 & letterArray[7] === 1 & letterArray[8] === 1 ) {
-                    div7.innerHTML = "O"
-                    div7.style.pointerEvents = "none";
-                    letterArray.splice(6,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 14:
-                if (slot = 1 & letterArray[8] === 1 & letterArray[4] === 1 & letterArray[0] === 0 ) {
-                    div1.innerHTML = "O"
-                    div1.style.pointerEvents = "none";
-                    letterArray.splice(0,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 15:
-                if (slot = 1 & letterArray[8] === 1 & letterArray[5] === 1 & letterArray[2] === 0 ) {
-                    div3.innerHTML = "O"
-                    div3.style.pointerEvents = "none";
-                    letterArray.splice(2,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-
-
-            case 16:
-                if (slot = 1 & letterArray[0] === 1 & letterArray[1] === 0 & letterArray[2] === 1 ) {
-                    div2.innerHTML = "O"
-                    div2.style.pointerEvents = "none";
-                    letterArray.splice(1,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 17:
-                if (slot = 1 & letterArray[0] === 1 & letterArray[3] === 0 & letterArray[6] === 1 ) {
-                    div4.innerHTML = "O"
-                    div4.style.pointerEvents = "none";
-                    letterArray.splice(3,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 18:
-                if (slot = 1 & letterArray[6] === 1 & letterArray[7] === 0 & letterArray[8] === 1 ) {
-                    div8.innerHTML = "O"
-                    div8.style.pointerEvents = "none";
-                    letterArray.splice(7,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 19:
-                if (slot = 1 & letterArray[8] === 1 & letterArray[5] === 0 & letterArray[2] === 1 ) {
-                    div6.innerHTML = "O"
-                    div6.style.pointerEvents = "none";
-                    letterArray.splice(5,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 20:
-               if (slot = 1 & letterArray[6] === 1 & letterArray[4] === 0 & letterArray[2] === 1 ) {
-                  div5.innerHTML = "O"
-                  div5.style.pointerEvents = "none";
-                  letterArray.splice(4,1,2);
-                  document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                  break;
-               }
-            case 21:
-               if (slot = 1 & letterArray[6] == 0 & letterArray[4] === 1 & letterArray[2] === 1 ) {
-                  div7.innerHTML = "O"
-                  div7.style.pointerEvents = "none";
-                  letterArray.splice(6,1,2);
-                  document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                  break;
-               }
-               case 22:
-               if (slot = 1 & letterArray[0] === 1 & letterArray[4] === 0 & letterArray[8] === 1 ) {
-                  div5.innerHTML = "O"
-                  div5.style.pointerEvents = "none";
-                  letterArray.splice(4,1,2);
-                  document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                  break;
-               }
-               case 23:
-               if (slot = 1 & letterArray[0] === 0 & letterArray[4] === 1 & letterArray[8] === 1 ) {
-                  div1.innerHTML = "O"
-                  div1.style.pointerEvents = "none";
-                  letterArray.splice(0,1,2);
-                  document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                  break;
-               }
-               case 24:
-               if (slot = 1 & letterArray[1] == 1 & letterArray[4] == 0 & letterArray[7] == 1 ) {
-                  div5.innerHTML = "O"
-                  div5.style.pointerEvents = "none";
-                  letterArray.splice(4,1,2);
-                  document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                  break;
-               }
-               case 25:
-               if (slot = 1 & letterArray[1] === 0 & letterArray[4] === 1 & letterArray[7] === 1 ) {
-                  div2.innerHTML = "O"
-                  div2.style.pointerEvents = "none";
-                  letterArray.splice(1,1,2);
-                  document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                  break;
-               }
-               case 26:
-               if (slot = 1 & letterArray[3] === 1 & letterArray[4] === 0 & letterArray[5] === 1 ) {
-                  div2.innerHTML = "O"
-                  div2.style.pointerEvents = "none";
-                  letterArray.splice(1,1,2);
-                  document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                  break;
-               }
-
-
-
-
-
-                
-            case 24:
-                if (slot = 1 & letterArray[0] === 0) {
-                    div1.innerHTML = "O"
-                    div1.style.pointerEvents = "none";
-                    letterArray.splice(0,1,2); 
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 25:
-                if (slot = 2 & letterArray[1] === 0) {
-                    div2.innerHTML = "O"
-                    div2.style.pointerEvents = "none";
-                    letterArray.splice(1,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 26:
-                if (slot = 3 & letterArray[2] === 0) {
-                    div3.innerHTML = "O"
-                    div3.style.pointerEvents = "none";
-                    letterArray.splice(2,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 27:
-                if (slot = 4 & letterArray[3] === 0) {
-                    div4.innerHTML = "O"
-                    div4.style.pointerEvents = "none";
-                    letterArray.splice(3,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 28:
-                if (slot = 5 & letterArray[4] === 0) {
-                    div5.innerHTML = "O"
-                    div5.style.pointerEvents = "none";
-                    letterArray.splice(4,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 29:
-                if (slot = 6 & letterArray[5] === 0) {
-                    div6.innerHTML = "O"
-                    div6.style.pointerEvents = "none";
-                    letterArray.splice(5,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 30:
-                if (slot = 7 & letterArray[6] == 0) {
-                    div7.innerHTML = "O"
-                    div7.style.pointerEvents = "none";
-                    letterArray.splice(6,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 31:
-                if (slot = 8 & letterArray[7] === 0) {
-                    div8.innerHTML = "O"
-                    div8.style.pointerEvents = "none";
-                    letterArray.splice(7,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            case 32:
-                if (slot = 9 & letterArray[8] === 0) {
-                    div9.innerHTML = "O"
-                    div9.style.pointerEvents = "none";
-                    letterArray.splice(8,1,2);
-                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                    break;
-                }
-            }    
-        
-
-// if (slot2 <= 7) {
-    switch (slot) {
-        case 1:
-            if (slot == 1 & letterArray[0] === 0) {
-                div1.innerHTML = "O"
-                letterArray.splice(0,1,2);
-                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                break;
-            }
-        case 2:
-            if (slot == 2 & letterArray[1] === 0) {
-                div2.innerHTML = "O"
-                letterArray.splice(1,1,2);
-                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                break;
-            }
-        case 3:
-            if (slot == 3 & letterArray[2] === 0) {
-                div3.innerHTML = "O"
-                letterArray.splice(2,1,2);
-                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                break;
-            }
-        case 4:
-            if (slot == 4 & letterArray[3] === 0) {
-                div4.innerHTML = "O"
-                letterArray.splice(3,1,2);
-                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                break;
-            }
-        case 5:
-            if (slot == 5 & letterArray[4] === 0) {
-                div5.innerHTML = "O"
-                letterArray.splice(4,1,2);
-                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                break;
-            }
-        case 6:
-            if (slot == 6 & letterArray[5] === 0) {
-                div6.innerHTML = "O"
-                letterArray.splice(5,1,2);
-                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                break;
-            }
-        case 7:
-            if (slot == 7 & letterArray[6] == 0) {
-                div7.innerHTML = "O"
-                letterArray.splice(6,1,2);
-                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                break;
-            }
-        case 8:
-            if (slot == 8 & letterArray[7] === 0) {
-                div8.innerHTML = "O"
-                letterArray.splice(7,1,2);
-                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                break;
-            }
-        case 9:
-            if (slot == 9 & letterArray[8] === 0) {
-                div9.innerHTML = "O"
-                letterArray.splice(8,1,2);
-                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                break;
-            }
-        }
-        
-}
-
-
-
-function cpuMTurn () {
-    currentLetter++;
-    var slot = Math.ceil(Math.random() * 9);
-    console.log(slot)
-    var slot2 = Math.ceil(Math.random() * 9);
-// if (slot2 <= 7) {
-
-
-   if (letterArray[0] === 2 && letterArray[1] === 2 && letterArray[2] === 0) {
-      div3.innerHTML = "O"
-      letterArray.splice(2,1,2);
-      div3.style.pointerEvents = "none";
-      winner.innerHTML = "O Wins";
-      document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-      freezer();
-      player2Score++;
-      player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-      var myTimeout = setTimeout(function () {resetter()}, 5000);
-      return;
-   } if (letterArray[0] === 2 && letterArray[3] === 2 && letterArray[6] == 0) {
-      div7.innerHTML = "O"
-      letterArray.splice(6,1,2);
-      div7.style.pointerEvents = "none";
-      winner.innerHTML = "O Wins";
-      document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-      freezer();
-      player2Score++;
-      player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-      var myTimeout = setTimeout(function () {resetter()}, 5000);
-      return;
-   } if (letterArray[0] === 2 && letterArray[4] === 2 && letterArray[8] === 0) {
-      div9.innerHTML = "O"
-      div9.style.pointerEvents = "none";
-      winner.innerHTML = "O Wins";
-      document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-      freezer();
-      player2Score++;
-      player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-      var myTimeout = setTimeout(function () {resetter()}, 5000);
-      letterArray.splice(8,1,2);
-      return;
-   } if (letterArray[1] === 2 && letterArray[4] === 2 && letterArray[7] === 0) {
-      div8.innerHTML = "O"
-                    div8.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(7,1,2);
-                    return;
-   }if (letterArray[0] === 0 && letterArray[1] === 2 && letterArray[2] === 2) {
-      div3.innerHTML = "O"
-                    div3.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(0,1,2);
-                    return;
-   } if (letterArray[2] === 2 && letterArray[5] === 2 && letterArray[8] === 0) {
-      div9.innerHTML = "O"
-                    div9.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(8,1,2);
-                    return;
-   } if (letterArray[0] === 0 && letterArray[3] === 2 && letterArray[6] === 2) {
-      div1.innerHTML = "O"
-                    div1.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(0,1,2);
-                    return;
-   } if (letterArray[6] === 2 && letterArray[4] === 2 && letterArray[2] === 0) {
-      div3.innerHTML = "O"
-                    div3.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(2,1,2);
-                    return;
-   }if (letterArray[6] === 2 && letterArray[7] === 2 && letterArray[8] === 0) {
-      div9.innerHTML = "O"
-                    div9.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(8,1,2);
-                    return;
-   }if (letterArray[7] === 2 && letterArray[4] === 2 && letterArray[1] === 0) {
-      div3.innerHTML = "O"
-                    div3.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(2,1,2);
-                    return;
-
-
-
-
-
-   }if (letterArray[3] === 2 && letterArray[4] === 2 && letterArray[5] === 0) {
-      div6.innerHTML = "O"
-                    div6.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(5,1,2);
-                    return;
-   }if (letterArray[3] === 0 && letterArray[4] === 2 && letterArray[5] === 2) {
-      div4.innerHTML = "O"
-                    div4.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(3,1,2);
-                    return;
-   }if (letterArray[6] == 0 && letterArray[7] === 2 && letterArray[8] === 2) {
-      div7.innerHTML = "O"
-                    div7.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(6,1,2);
-                    return;
-   } if (letterArray[8] === 2 && letterArray[4] === 2 && letterArray[0] === 0) {
-      div1.innerHTML = "O"
-                    div1.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(0,1,2);
-                    return;
-   }if (letterArray[8] === 2 && letterArray[5] === 2 && letterArray[2] === 0) {
-      div3.innerHTML = "O"
-                    div3.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(2,1,2);
-                    return;
-   }  if (letterArray[0] === 2 && letterArray[1] === 0 && letterArray[2] === 2) {
-      div2.innerHTML = "O"
-                    div2.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(1,1,2);
-                    return;
-   } if (letterArray[0] === 2 && letterArray[3] === 0 && letterArray[6] === 2) {
-      div4.innerHTML = "O"
-                    div4.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(3,1,2);
-                    return;
-   } if (letterArray[6] === 2 && letterArray[7] === 0 && letterArray[8] === 2) {
-      div8.innerHTML = "O"
-                    div8.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(7,1,2);
-                    return;
-   } if (letterArray[8] === 2 && letterArray[5] === 0 && letterArray[2] === 2) {
-      div6.innerHTML = "O"
-                    div6.style.pointerEvents = "none";
-                    winner.innerHTML = "O Wins";
-                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                    freezer();
-                    player2Score++;
-                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                    var myTimeout = setTimeout(function () {resetter()}, 5000);
-                    letterArray.splice(5,1,2);
-                    return;
-   } if (letterArray[6] === 2 && letterArray[4] === 0 && letterArray[2] === 2) {
-      div5.innerHTML = "O"
-                  div5.style.pointerEvents = "none";
-                  winner.innerHTML = "O Wins";
-                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                  freezer();
-                  player2Score++;
-                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                  var myTimeout = setTimeout(function () {resetter()}, 5000);
-                  letterArray.splice(4,1,2);
-                  return;
-
-
-
-
-
-
-   } if (letterArray[6] == 0 && letterArray[4] === 2 && letterArray[2] === 2) {
-      div6.innerHTML = "O"
-                  div6.style.pointerEvents = "none";
-                  winner.innerHTML = "O Wins";
-                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                  freezer();
-                  player2Score++;
-                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                  var myTimeout = setTimeout(function () {resetter()}, 5000);
-                  letterArray.splice(6,1,2);
-                  return;
-   } if (letterArray[0] === 2 && letterArray[4] === 0 && letterArray[8] === 2) {
-      div5.innerHTML = "O"
-                  div5.style.pointerEvents = "none";
-                  winner.innerHTML = "O Wins";
-                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                  freezer();
-                  player2Score++;
-                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                  var myTimeout = setTimeout(function () {resetter()}, 5000);
-                  letterArray.splice(4,1,2);
-                  return;
-   } if (letterArray[0] === 0 && letterArray[4] === 2 && letterArray[8] === 2) {
-      div1.innerHTML = "O"
-                  div1.style.pointerEvents = "none";
-                  winner.innerHTML = "O Wins";
-                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                  freezer();
-                  player2Score++;
-                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                  var myTimeout = setTimeout(function () {resetter()}, 5000);
-                  letterArray.splice(0,1,2);
-                  return;
-   } if (letterArray[1] === 0 && letterArray[4] === 2 && letterArray[7] === 2) {
-      div2.innerHTML = "O"
-                  div2.style.pointerEvents = "none";
-                  winner.innerHTML = "O Wins";
-                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                  freezer();
-                  player2Score++;
-                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                  var myTimeout = setTimeout(function () {resetter()}, 5000);
-                  letterArray.splice(1,1,2);
-                  return;
-   }if ( letterArray[1] === 2 && letterArray[4] === 0 && letterArray[7] === 2) {
-      div5.innerHTML = "O"
-                  div5.style.pointerEvents = "none";
-                  winner.innerHTML = "O Wins";
-                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                  freezer();
-                  player2Score++;
-                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                  var myTimeout = setTimeout(function () {resetter()}, 5000);
-                  letterArray.splice(4,1,2);
-                  return;
-   }
-
-   // if (slot = 1 & letterArray[0] === 1 & letterArray[1] === 1 & letterArray[2] === 0) {
-   //    div3.innerHTML = "O"
-   //                  letterArray.splice(2,1,2);
-   //                  div3.style.pointerEvents = "none";
-   //                  return;
-   // }
-   // if (slot = 1 & letterArray[0] === 1 & letterArray[3] === 1 & letterArray[6] == 0) {
-   //    div7.innerHTML = "O"
-   //                  letterArray.splice(6,1,2);
-   //                  div7.style.pointerEvents = "none";
-   //                  return;
-   // }
-   // if (slot = 1 & letterArray[0] === 1 & letterArray[4] === 1 & letterArray[8] === 0) {
-   //    div9.innerHTML = "O"
-   //                  div9.style.pointerEvents = "none";
-   //                  letterArray.splice(8,1,2);
-   //                  return;
-   // }
-   // if (slot = 1 & letterArray[1] == 1 & letterArray[4] == 1 & letterArray[7] == 0) {
-   //    div8.innerHTML = "O"
-   //                  div8.style.pointerEvents = "none";
-   //                  letterArray.splice(7,1,2);
-   //                  return;
-   // }
-   // if (slot = 1 & letterArray[0] === 0 & letterArray[1] === 1 & letterArray[2] === 1) {
-   //    div3.innerHTML = "O"
-   //                  div3.style.pointerEvents = "none";
-   //                  letterArray.splice(0,1,2);
-   //                  return;
-   // }
-
-   // if (slot = 1 & letterArray[2] === 1 & letterArray[5] === 1 & letterArray[8] === 0) {
-   //    div9.innerHTML = "O"
-   //                  div9.style.pointerEvents = "none";
-   //                  letterArray.splice(8,1,2);
-   //                  return;
-   // }
-   // if (slot = 1 & letterArray[0] === 0 & letterArray[3] === 1 & letterArray[6] === 1) {
-   //    div1.innerHTML = "O"
-   //                  div1.style.pointerEvents = "none";
-   //                  letterArray.splice(0,1,2);
-   //                  return;
-   // }
-   // if (slot = 1 & letterArray[6] === 1 & letterArray[4] === 1 & letterArray[2] === 0) {
-   //    div3.innerHTML = "O"
-   //                  div3.style.pointerEvents = "none";
-   //                  letterArray.splice(2,1,2);
-   //                  return;
-   // }
-   // if (slot = 1 & letterArray[6] === 1 & letterArray[7] === 1 & letterArray[8] === 0) {
-   //    div9.innerHTML = "O"
-   //                  div9.style.pointerEvents = "none";
-   //                  letterArray.splice(8,1,2);
-   //                  return;
-   // }
-   // if (slot = 1 & letterArray[7] == 1 & letterArray[4] == 1 & letterArray[1] == 0) {
-   //    div3.innerHTML = "O"
-   //                  div3.style.pointerEvents = "none";
-   //                  letterArray.splice(1,1,2);
-   //                  return;
-   // }
-
-
-
-
-
-
-   // if (slot = 1 & letterArray[3] === 1 & letterArray[4] === 1 & letterArray[5] === 0) {
-   //    div6.innerHTML = "O"
-   //                  div6.style.pointerEvents = "none";
-   //                  letterArray.splice(5,1,2);
-   //                  return;
-   // }
-   // if (slot = 1 & letterArray[3] === 0 & letterArray[4] === 1 & letterArray[5] === 1) {
-   //    div4.innerHTML = "O"
-   //                  div4.style.pointerEvents = "none";
-   //                  letterArray.splice(3,1,2);
-   //                  return;
-   // }
-   // if (slot = 1 & letterArray[6] == 0 & letterArray[7] === 1 & letterArray[8] === 1) {
-   //    div7.innerHTML = "O"
-   //                  div7.style.pointerEvents = "none";
-   //                  letterArray.splice(6,1,2);
-   //                  return;
-   // }
-   // if (slot = 1 & letterArray[8] === 1 & letterArray[4] === 1 & letterArray[0] === 0) {
-   //    div1.innerHTML = "O"
-   //                  div1.style.pointerEvents = "none";
-   //                  letterArray.splice(0,1,2);
-   //                  return;
-   // }
-   // if (slot = 1 & letterArray[8] === 1 & letterArray[5] === 1 & letterArray[2] === 0) {
-   //    div3.innerHTML = "O"
-   //                  div3.style.pointerEvents = "none";
-   //                  letterArray.splice(2,1,2);
-   //                  return;
-   // }
-
-   // if (slot = 1 & letterArray[0] === 1 & letterArray[1] === 0 & letterArray[2] === 1) {
-   //    div2.innerHTML = "O"
-   //                  div2.style.pointerEvents = "none";
-   //                  letterArray.splice(1,1,2);
-   //                  return;
-   // }
-   // if (slot = 1 & letterArray[0] === 1 & letterArray[3] === 0 & letterArray[6] === 1) {
-   //    div4.innerHTML = "O"
-   //                  div4.style.pointerEvents = "none";
-   //                  letterArray.splice(3,1,2);
-   //                  return;
-   // }
-   // if (slot = 1 & letterArray[6] === 1 & letterArray[7] === 0 & letterArray[8] === 1) {
-   //    div8.innerHTML = "O"
-   //                  div8.style.pointerEvents = "none";
-   //                  letterArray.splice(7,1,2);
-   //                  return;
-   // }
-   // if (slot = 1 & letterArray[8] === 1 & letterArray[5] === 0 & letterArray[2] === 1) {
-   //    div6.innerHTML = "O"
-   //                  div6.style.pointerEvents = "none";
-   //                  letterArray.splice(5,1,2);
-   //                  return;
-   // }
-   // if (slot = 1 & letterArray[6] === 1 & letterArray[4] === 0 & letterArray[2] === 1) {
-   //    div5.innerHTML = "O"
-   //                div5.style.pointerEvents = "none";
-   //                letterArray.splice(4,1,2);
-   //                return;
-   // }
-
-
-
-
-
-   // if (slot = 1 & letterArray[6] == 0 & letterArray[4] === 1 & letterArray[2] === 1) {
-   //    div7.innerHTML = "O"
-   //                div7.style.pointerEvents = "none";
-   //                letterArray.splice(6,1,2);
-   //                return;
-   // }
-   // if (slot = 1 & letterArray[0] === 1 & letterArray[4] === 0 & letterArray[8] === 1) {
-   //    div5.innerHTML = "O"
-   //                div5.style.pointerEvents = "none";
-   //                letterArray.splice(4,1,2);
-   //                return;
-   // }
-   // if (slot = 1 & letterArray[0] === 0 & letterArray[4] === 1 & letterArray[8] === 1) {
-   //    div1.innerHTML = "O"
-   //                div1.style.pointerEvents = "none";
-   //                letterArray.splice(0,1,2);
-   //                return;
-   // }
-   // if (slot = 1 & letterArray[1] == 1 & letterArray[4] == 0 & letterArray[7] == 1) {
-   //    div5.innerHTML = "O"
-   //                div5.style.pointerEvents = "none";
-   //                letterArray.splice(4,1,2);
-   //                return;
-   // }
-   // if (slot = 1 & letterArray[1] == 0 & letterArray[4] == 1 & letterArray[7] == 1) {
-   //    div2.innerHTML = "O"
-   //                div2.style.pointerEvents = "none";
-   //                letterArray.splice(1,1,2);
-   //                return;
-   // }
-
-
-
-
-
-   if (slot == 1 && letterArray[0] == 0) {
-                div1.innerHTML = "O"
-                div1.style.pointerEvents = "none";
-                letterArray.splice(0,1,2);
-                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                return;
-            }
-             if (slot == 2 && letterArray[1] == 0) {
-                div2.innerHTML = "O"
-                div2.style.pointerEvents = "none";
-                letterArray.splice(1,1,2);
-                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                return;
-            }
-             if (slot == 3 && letterArray[2] == 0) {
-                div3.innerHTML = "O"
-                div3.style.pointerEvents = "none";
-                letterArray.splice(2,1,2);
-                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                return;
-            }
-            if (slot == 4 && letterArray[3] == 0) {
-                div4.innerHTML = "O"
-                div4.style.pointerEvents = "none";
-                letterArray.splice(3,1,2);
-                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                return;
-            }
-             if (slot == 5 && letterArray[4] == 0) {
-                div5.innerHTML = "O"
-                div5.style.pointerEvents = "none";
-                letterArray.splice(4,1,2);
-                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                return;
-            }
-             if (slot == 6 && letterArray[5] == 0) {
-                div6.innerHTML = "O"
-                div6.style.pointerEvents = "none";
-                letterArray.splice(5,1,2);
-                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                return;
-            }
-             if (slot == 7 && letterArray[6] == 0) {
-                div7.innerHTML = "O"
-                div7.style.pointerEvents = "none";
-                letterArray.splice(6,1,2);
-                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                return;
-            }
-             if (slot == 8 && letterArray[7] == 0) {
-                div8.innerHTML = "O"
-                div8.style.pointerEvents = "none";
-                letterArray.splice(7,1,2);
-                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                return;
-            }
-             if (slot == 9 && letterArray[8] == 0) {
-                div9.innerHTML = "O"
-                div9.style.pointerEvents = "none";
-                letterArray.splice(8,1,2);
-                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
-                return;
-            }
-
-
-
-
-            if (letterArray[0] == 0) {
-                div1.innerHTML = "O"
-                div1.style.pointerEvents = "none";
-                letterArray.splice(0,1,2);
-                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                return;
-            }
-             if (letterArray[1] == 0) {
-                div2.innerHTML = "O"
-                div2.style.pointerEvents = "none";
-                letterArray.splice(1,1,2);
-                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                return;
-            }
-             if (letterArray[2] == 0) {
-                div3.innerHTML = "O"
-                div3.style.pointerEvents = "none";
-                letterArray.splice(2,1,2);
-                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                return;
-            }
-            if (letterArray[3] == 0) {
-                div4.innerHTML = "O"
-                div4.style.pointerEvents = "none";
-                letterArray.splice(3,1,2);
-                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                return;
-            }
-             if (letterArray[4] == 0) {
-                div5.innerHTML = "O"
-                div5.style.pointerEvents = "none";
-                letterArray.splice(4,1,2);
-                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                return;
-            }
-             if (letterArray[5] == 0) {
-                div6.innerHTML = "O"
-                div6.style.pointerEvents = "none";
-                letterArray.splice(5,1,2);
-                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                return;
-            }
-             if (letterArray[6] == 0) {
-                div7.innerHTML = "O"
-                div7.style.pointerEvents = "none";
-                letterArray.splice(6,1,2);
-                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                return;
-            }
-             if (letterArray[7] == 0) {
-                div8.innerHTML = "O"
-                div8.style.pointerEvents = "none";
-                letterArray.splice(7,1,2);
-                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                return;
-            }
-             if (letterArray[8] == 0) {
-                div9.innerHTML = "O"
-                div9.style.pointerEvents = "none";
-                letterArray.splice(8,1,2);
-                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                return;
-            }
-         
-      }
-
-
-
-
-
-
-
 function easyPlayer() {
    currentLetter++;
    var easy = Math.ceil(Math.random() * 9);
@@ -4016,6 +2567,1463 @@ function easyPlayer() {
    }
    
 }
+
+
+
+
+   var btn5 = document.getElementById("btn5");
+    var btnclick2 = 1;
+          btn5.onclick = function() {
+             btnclick2++;
+             if (btnclick2 % 2 == 0) {
+               btn5.innerHTML = "VS Player"
+               opponent.innerHTML = "Opponent: Airialle";
+                cpuTurn();  
+             } else {
+               btn5.innerHTML = "VS CPU - Airialle (Hard)";
+               opponent.innerHTML = "Opponent: Player 2";
+          }
+    };
+
+    var btn6 = document.getElementById("btn6");
+    var btnclick3 = 1;
+          btn6.onclick = function() {
+             btnclick3++;
+             if (btnclick3 % 2 == 0) {
+               btn6.innerHTML = "VS Player"
+               opponent.innerHTML = "Opponent: Mark";
+                cpuMTurn();  
+             } else {
+               btn6.innerHTML = "VS CPU Mark (Normal)";
+               opponent.innerHTML = "Opponent: Player 2";
+          }
+    };
+
+    var btn8 = document.getElementById("btn8");
+    var btnclick8 = 1;
+          btn8.onclick = function() {
+             btnclick8++;
+             if (btnclick8 % 2 == 0) {
+               btn8.innerHTML = "VS Player"
+               opponent.innerHTML = "Opponent: Mark";
+                easyPlayer();  
+             } else {
+               btn8.innerHTML = "VS CPU Mark (Normal)";
+               opponent.innerHTML = "Opponent: Player 2";
+          }
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            function scoreReset() {
+               if (player2Score === 5 & btnclick7 == 1) {
+                  player1ScoreVsCPU = 0;
+                  document.getElementById("CPUSays").innerHTML = 'Game Over!"'
+                  var myTimeout = setTimeout(function () {
+                     document.getElementById("CPUSays").innerHTML = "";
+                  }, 10000)
+
+               }
+               if (player2Score === 5) {
+                  player2Score = 0;
+                  player2score.innerHTML = `Player 1's Score: <br> ${player2Score}`;
+                  player1Score = 0;
+                  player1score.innerHTML = `Player 2's Score: <br> ${player1Score}`;
+                  var myTimeout = setTimeout( function () {
+                     document.getElementById("newDiv").innerHTML = "";
+                  }, 3000)
+               }
+               if (player1Score === 5) {
+                  player1Score = 0;
+                  player1score.innerHTML = `Player 1's Score: <br> ${player1Score}`;
+                  player2Score = 0;
+                  player2score.innerHTML = `Player 2's Score: <br> ${player2Score}`;
+                  document.getElementById("newDiv").innerHTML = "First to 5 points wins.";
+                  var myTimeout = setTimeout( function () {
+                     document.getElementById("newDiv").innerHTML = "";
+                  }, 3000)
+               }
+            }
+
+            var displayReplay = 0;
+            document.getElementById("prompt").addEventListener("click", function () {
+               displayReplay++;
+               if (displayReplay % 2 == 0) {
+                  document.getElementById("scoreString").style.display = "unset";
+               } else {
+                  document.getElementById("scoreString").style.display = "none";
+               }
+
+
+         })
+         document.getElementById("prompt").addEventListener("mouseover", function () {
+            document.getElementById("prompt").style.cursor = "pointer";
+         })
+           
+
+
+
+
+
+
+
+        var currentLetter = 0;
+        if (currentLetter % 2 == 0) {
+            player2s.innerHTML="Player 2's turn";
+        }else {
+            player2s.innerHTML="Player 1's turn";
+        }
+        function boss() {
+            
+            
+
+
+      
+            
+
+
+
+            function cpuTurn () {
+               
+    currentLetter++;
+    var slot = Math.ceil(Math.random() * 9);
+    console.log(slot)
+    var slot2 = Math.ceil(Math.random() * 9);
+      //   if (slot2 > 7) {
+            switch (slot) {
+            case 1:
+                if (slot = 1 & letterArray[0] === 2 & letterArray[1] === 2 & letterArray[2] === 0 ) {
+                    div3.innerHTML = "O"
+                    letterArray.splice(2,1,2);
+                    div3.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    break;
+                }
+            case 2:
+                if (slot = 1 & letterArray[0] === 2 & letterArray[3] === 2 & letterArray[6] == 0 ) {
+                    div7.innerHTML = "O"
+                    letterArray.splice(6,1,2);
+                    div7.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    break;
+                }
+            case 3:
+                if (slot = 1 & letterArray[0] === 2 & letterArray[4] === 2 & letterArray[8] === 0 ) {
+                    div9.innerHTML = "O"
+                    div9.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(8,1,2);
+                    break;
+                }  
+                
+                
+            case 4:
+                if (slot = 1 & letterArray[1] === 2 & letterArray[4] === 2 & letterArray[7] === 0 ) {
+                    div8.innerHTML = "O"
+                    div8.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(7,1,2);
+                    break;
+                }
+            case 5:
+                if (slot = 1 & letterArray[0] === 0 & letterArray[1] === 2 & letterArray[2] === 2 ) {
+                    div3.innerHTML = "O"
+                    div3.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(0,1,2);
+                    break;
+                }
+            case 6:
+                if (slot = 1 & letterArray[2] === 2 & letterArray[5] === 2 & letterArray[8] === 0 ) {
+                    div9.innerHTML = "O"
+                    div9.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(8,1,2);
+                    break;
+                }
+                
+                
+            case 7:
+                if (slot = 1 & letterArray[0] === 0 & letterArray[3] === 2 & letterArray[6] === 2 ) {
+                    div1.innerHTML = "O"
+                    div1.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(0,1,2);
+                    break;
+                }
+            case 8:
+                if (slot = 1 & letterArray[6] === 2 & letterArray[4] === 2 & letterArray[2] === 0 ) {
+                    div3.innerHTML = "O"
+                    div3.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(2,1,2);
+                    break;
+                }
+            case 9:
+                if (slot = 1 & letterArray[6] === 2 & letterArray[7] === 2 & letterArray[8] === 0 ) {
+                    div9.innerHTML = "O"
+                    div9.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(8,1,2);
+                    break;
+                }
+
+
+            case 10:
+                if (slot = 1 & letterArray[7] === 2 & letterArray[4] === 2 & letterArray[1] === 0 ) {
+                    div3.innerHTML = "O"
+                    div3.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(2,1,2);
+                    break;
+                }
+            case 11:
+                if (slot = 1 & letterArray[3] == 2 & letterArray[4] == 2 & letterArray[5] == 0 ) {
+                    div6.innerHTML = "O"
+                    div6.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(5,1,2);
+                    break;
+                }
+            case 12:
+                if (slot = 1 & letterArray[3] === 0 & letterArray[4] === 2 & letterArray[5] === 2 ) {
+                    div4.innerHTML = "O"
+                    div4.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(3,1,2);
+                    break;
+                }
+
+
+            case 13:
+                if (slot = 1 & letterArray[6] === 0 & letterArray[7] === 2 & letterArray[8] === 2 ) {
+                    div7.innerHTML = "O"
+                    div7.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(6,1,2);
+                    break;
+                }
+            case 14:
+                if (slot = 1 & letterArray[8] === 2 & letterArray[4] === 2 & letterArray[0] === 0 ) {
+                    div1.innerHTML = "O"
+                    div1.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(0,1,2);
+                    break;
+                }
+            case 15:
+                if (slot = 1 & letterArray[8] === 2 & letterArray[5] === 2 & letterArray[2] === 0 ) {
+                    div3.innerHTML = "O"
+                    div3.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(2,1,2);
+                    break;
+                }
+
+
+            case 16:
+                if (slot = 1 & letterArray[0] == 2 & letterArray[1] == 0 & letterArray[2] == 2 ) {
+                    div2.innerHTML = "O"
+                    div2.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(1,1,2);
+                    break;
+                }
+            case 17:
+                if (slot = 1 & letterArray[0] === 2 & letterArray[3] === 0 & letterArray[6] === 2 ) {
+                    div4.innerHTML = "O"
+                    div4.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(3,1,2);
+                    break;
+                }
+            case 18:
+                if (slot = 1 & letterArray[6] === 2 & letterArray[7] === 0 & letterArray[8] === 2 ) {
+                    div8.innerHTML = "O"
+                    div8.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(7,1,2);
+                    break;
+                }
+            case 19:
+                if (slot = 1 & letterArray[8] === 2 & letterArray[5] === 0 & letterArray[2] === 2 ) {
+                    div6.innerHTML = "O"
+                    div6.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(5,1,2);
+                    break;
+                }
+            case 20:
+               if (slot = 1 & letterArray[6] === 2 & letterArray[4] === 0 & letterArray[2] === 2 ) {
+                  div5.innerHTML = "O"
+                  div5.style.pointerEvents = "none";
+                  winner.innerHTML = "O Wins";
+                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                  freezer();
+                  player2Score++;
+                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                  var myTimeout = setTimeout(function () {resetter()}, 5000);
+                  letterArray.splice(4,1,2);
+                  break;
+               }
+            case 21:
+               if (slot = 1 & letterArray[6] == 0 & letterArray[4] === 2 & letterArray[2] === 2 ) {
+                  div6.innerHTML = "O"
+                  div6.style.pointerEvents = "none";
+                  winner.innerHTML = "O Wins";
+                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                  freezer();
+                  player2Score++;
+                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                  var myTimeout = setTimeout(function () {resetter()}, 5000);
+                  letterArray.splice(6,1,2);
+                  break;
+               }
+               case 22:
+               if (slot = 1 & letterArray[0] === 2 & letterArray[4] === 0 & letterArray[8] === 2 ) {
+                  div5.innerHTML = "O"
+                  div5.style.pointerEvents = "none";
+                  winner.innerHTML = "O Wins";
+                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                  freezer();
+                  player2Score++;
+                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                  var myTimeout = setTimeout(function () {resetter()}, 5000);
+                  letterArray.splice(4,1,2);
+                  break;
+               }
+               case 23:
+               if (slot = 1 & letterArray[0] === 0 & letterArray[4] === 2 & letterArray[8] === 2 ) {
+                  div1.innerHTML = "O"
+                  div1.style.pointerEvents = "none";
+                  winner.innerHTML = "O Wins";
+                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                  freezer();
+                  player2Score++;
+                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                  var myTimeout = setTimeout(function () {resetter()}, 5000);
+                  letterArray.splice(0,1,2);
+                  break;
+               }
+               case 24:
+               if (letterArray[1] == 0 & letterArray[4] == 2 & letterArray[7] == 2 ) {
+                  div2.innerHTML = "O"
+                  div2.style.pointerEvents = "none";
+                  winner.innerHTML = "O Wins";
+                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                  freezer();
+                  player2Score++;
+                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                  var myTimeout = setTimeout(function () {resetter()}, 5000);
+                  letterArray.splice(1,1,2);
+                  break;
+               }
+               case 25:
+               if (slot = 1 & letterArray[1] === 2 & letterArray[4] === 0 & letterArray[7] === 2 ) {
+                  div5.innerHTML = "O"
+                  div5.style.pointerEvents = "none";
+                  winner.innerHTML = "O Wins";
+                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                  freezer();
+                  player2Score++;
+                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                  var myTimeout = setTimeout(function () {resetter()}, 5000);
+                  letterArray.splice(4,1,2);
+                  break;
+               }
+
+
+
+
+               case 1:
+                if (slot = 1 & letterArray[0] === 1 & letterArray[1] === 1 & letterArray[2] === 0 ) {
+                    div3.innerHTML = "O"
+                    letterArray.splice(2,1,2);
+                    div3.style.pointerEvents = "none";
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 2:
+                if (slot = 1 & letterArray[0] === 1 & letterArray[3] === 1 & letterArray[6] == 0 ) {
+                    div7.innerHTML = "O"
+                    letterArray.splice(6,1,2);
+                    div7.style.pointerEvents = "none";
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 3:
+                if (slot = 1 & letterArray[0] === 1 & letterArray[4] === 1 & letterArray[8] === 0 ) {
+                    div9.innerHTML = "O"
+                    div9.style.pointerEvents = "none";
+                    letterArray.splice(8,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }  
+                
+                
+            case 4:
+                if (slot = 1 & letterArray[1] == 1 & letterArray[4] == 1 & letterArray[7] == 0 ) {
+                    div8.innerHTML = "O"
+                    div8.style.pointerEvents = "none";
+                    letterArray.splice(7,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 5:
+                if (slot = 1 & letterArray[0] === 0 & letterArray[1] === 1 & letterArray[2] === 1 ) {
+                    div3.innerHTML = "O"
+                    div3.style.pointerEvents = "none";
+                    letterArray.splice(0,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 6:
+                if (slot = 1 & letterArray[2] === 1 & letterArray[5] === 1 & letterArray[8] === 0 ) {
+                    div9.innerHTML = "O"
+                    div9.style.pointerEvents = "none";
+                    letterArray.splice(8,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+                
+                
+            case 7:
+                if (slot = 1 & letterArray[0] === 0 & letterArray[3] === 1 & letterArray[6] === 1 ) {
+                    div1.innerHTML = "O"
+                    div1.style.pointerEvents = "none";
+                    letterArray.splice(0,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 8:
+                if (slot = 1 & letterArray[6] === 1 & letterArray[4] === 1 & letterArray[2] === 0 ) {
+                    div3.innerHTML = "O"
+                    div3.style.pointerEvents = "none";
+                    letterArray.splice(2,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 9:
+                if (slot = 1 & letterArray[6] === 1 & letterArray[7] === 1 & letterArray[8] === 0 ) {
+                    div9.innerHTML = "O"
+                    div9.style.pointerEvents = "none";
+                    letterArray.splice(8,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+
+
+            case 10:
+                if (slot = 1 & letterArray[7] == 1 & letterArray[4] == 1 & letterArray[1] == 0 ) {
+                    div2.innerHTML = "O"
+                    div2.style.pointerEvents = "none";
+                    letterArray.splice(1,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 11:
+                if (slot = 1 & letterArray[3] === 1 & letterArray[4] === 1 & letterArray[5] === 0 ) {
+                    div6.innerHTML = "O"
+                    div6.style.pointerEvents = "none";
+                    letterArray.splice(5,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 12:
+                if (slot = 1 & letterArray[3] === 0 & letterArray[4] === 1 & letterArray[5] === 1 ) {
+                    div4.innerHTML = "O"
+                    div4.style.pointerEvents = "none";
+                    letterArray.splice(3,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+
+
+            case 13:
+                if (slot = 1 & letterArray[6] == 0 & letterArray[7] === 1 & letterArray[8] === 1 ) {
+                    div7.innerHTML = "O"
+                    div7.style.pointerEvents = "none";
+                    letterArray.splice(6,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 14:
+                if (slot = 1 & letterArray[8] === 1 & letterArray[4] === 1 & letterArray[0] === 0 ) {
+                    div1.innerHTML = "O"
+                    div1.style.pointerEvents = "none";
+                    letterArray.splice(0,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 15:
+                if (slot = 1 & letterArray[8] === 1 & letterArray[5] === 1 & letterArray[2] === 0 ) {
+                    div3.innerHTML = "O"
+                    div3.style.pointerEvents = "none";
+                    letterArray.splice(2,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+
+
+            case 16:
+                if (slot = 1 & letterArray[0] === 1 & letterArray[1] === 0 & letterArray[2] === 1 ) {
+                    div2.innerHTML = "O"
+                    div2.style.pointerEvents = "none";
+                    letterArray.splice(1,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 17:
+                if (slot = 1 & letterArray[0] === 1 & letterArray[3] === 0 & letterArray[6] === 1 ) {
+                    div4.innerHTML = "O"
+                    div4.style.pointerEvents = "none";
+                    letterArray.splice(3,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 18:
+                if (slot = 1 & letterArray[6] === 1 & letterArray[7] === 0 & letterArray[8] === 1 ) {
+                    div8.innerHTML = "O"
+                    div8.style.pointerEvents = "none";
+                    letterArray.splice(7,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 19:
+                if (slot = 1 & letterArray[8] === 1 & letterArray[5] === 0 & letterArray[2] === 1 ) {
+                    div6.innerHTML = "O"
+                    div6.style.pointerEvents = "none";
+                    letterArray.splice(5,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 20:
+               if (slot = 1 & letterArray[6] === 1 & letterArray[4] === 0 & letterArray[2] === 1 ) {
+                  div5.innerHTML = "O"
+                  div5.style.pointerEvents = "none";
+                  letterArray.splice(4,1,2);
+                  document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                  break;
+               }
+            case 21:
+               if (slot = 1 & letterArray[6] == 0 & letterArray[4] === 1 & letterArray[2] === 1 ) {
+                  div7.innerHTML = "O"
+                  div7.style.pointerEvents = "none";
+                  letterArray.splice(6,1,2);
+                  document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                  break;
+               }
+               case 22:
+               if (slot = 1 & letterArray[0] === 1 & letterArray[4] === 0 & letterArray[8] === 1 ) {
+                  div5.innerHTML = "O"
+                  div5.style.pointerEvents = "none";
+                  letterArray.splice(4,1,2);
+                  document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                  break;
+               }
+               case 23:
+               if (slot = 1 & letterArray[0] === 0 & letterArray[4] === 1 & letterArray[8] === 1 ) {
+                  div1.innerHTML = "O"
+                  div1.style.pointerEvents = "none";
+                  letterArray.splice(0,1,2);
+                  document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                  break;
+               }
+               case 24:
+               if (slot = 1 & letterArray[1] == 1 & letterArray[4] == 0 & letterArray[7] == 1 ) {
+                  div5.innerHTML = "O"
+                  div5.style.pointerEvents = "none";
+                  letterArray.splice(4,1,2);
+                  document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                  break;
+               }
+               case 25:
+               if (slot = 1 & letterArray[1] === 0 & letterArray[4] === 1 & letterArray[7] === 1 ) {
+                  div2.innerHTML = "O"
+                  div2.style.pointerEvents = "none";
+                  letterArray.splice(1,1,2);
+                  document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                  break;
+               }
+               case 26:
+               if (slot = 1 & letterArray[3] === 1 & letterArray[4] === 0 & letterArray[5] === 1 ) {
+                  div2.innerHTML = "O"
+                  div2.style.pointerEvents = "none";
+                  letterArray.splice(1,1,2);
+                  document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                  break;
+               }
+
+
+
+
+
+                
+            case 24:
+                if (slot = 1 & letterArray[0] === 0) {
+                    div1.innerHTML = "O"
+                    div1.style.pointerEvents = "none";
+                    letterArray.splice(0,1,2); 
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 25:
+                if (slot = 2 & letterArray[1] === 0) {
+                    div2.innerHTML = "O"
+                    div2.style.pointerEvents = "none";
+                    letterArray.splice(1,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 26:
+                if (slot = 3 & letterArray[2] === 0) {
+                    div3.innerHTML = "O"
+                    div3.style.pointerEvents = "none";
+                    letterArray.splice(2,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 27:
+                if (slot = 4 & letterArray[3] === 0) {
+                    div4.innerHTML = "O"
+                    div4.style.pointerEvents = "none";
+                    letterArray.splice(3,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 28:
+                if (slot = 5 & letterArray[4] === 0) {
+                    div5.innerHTML = "O"
+                    div5.style.pointerEvents = "none";
+                    letterArray.splice(4,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 29:
+                if (slot = 6 & letterArray[5] === 0) {
+                    div6.innerHTML = "O"
+                    div6.style.pointerEvents = "none";
+                    letterArray.splice(5,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 30:
+                if (slot = 7 & letterArray[6] == 0) {
+                    div7.innerHTML = "O"
+                    div7.style.pointerEvents = "none";
+                    letterArray.splice(6,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 31:
+                if (slot = 8 & letterArray[7] === 0) {
+                    div8.innerHTML = "O"
+                    div8.style.pointerEvents = "none";
+                    letterArray.splice(7,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            case 32:
+                if (slot = 9 & letterArray[8] === 0) {
+                    div9.innerHTML = "O"
+                    div9.style.pointerEvents = "none";
+                    letterArray.splice(8,1,2);
+                    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                    break;
+                }
+            }    
+        
+
+// if (slot2 <= 7) {
+    switch (slot) {
+        case 1:
+            if (slot == 1 & letterArray[0] === 0) {
+                div1.innerHTML = "O"
+                letterArray.splice(0,1,2);
+                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                break;
+            }
+        case 2:
+            if (slot == 2 & letterArray[1] === 0) {
+                div2.innerHTML = "O"
+                letterArray.splice(1,1,2);
+                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                break;
+            }
+        case 3:
+            if (slot == 3 & letterArray[2] === 0) {
+                div3.innerHTML = "O"
+                letterArray.splice(2,1,2);
+                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                break;
+            }
+        case 4:
+            if (slot == 4 & letterArray[3] === 0) {
+                div4.innerHTML = "O"
+                letterArray.splice(3,1,2);
+                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                break;
+            }
+        case 5:
+            if (slot == 5 & letterArray[4] === 0) {
+                div5.innerHTML = "O"
+                letterArray.splice(4,1,2);
+                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                break;
+            }
+        case 6:
+            if (slot == 6 & letterArray[5] === 0) {
+                div6.innerHTML = "O"
+                letterArray.splice(5,1,2);
+                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                break;
+            }
+        case 7:
+            if (slot == 7 & letterArray[6] == 0) {
+                div7.innerHTML = "O"
+                letterArray.splice(6,1,2);
+                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                break;
+            }
+        case 8:
+            if (slot == 8 & letterArray[7] === 0) {
+                div8.innerHTML = "O"
+                letterArray.splice(7,1,2);
+                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                break;
+            }
+        case 9:
+            if (slot == 9 & letterArray[8] === 0) {
+                div9.innerHTML = "O"
+                letterArray.splice(8,1,2);
+                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                break;
+            }
+        }
+        
+}
+
+
+
+function cpuMTurn () {
+    currentLetter++;
+    var slot = Math.ceil(Math.random() * 9);
+    console.log(slot)
+    var slot2 = Math.ceil(Math.random() * 9);
+// if (slot2 <= 7) {
+
+
+   if (letterArray[0] === 2 && letterArray[1] === 2 && letterArray[2] === 0) {
+      div3.innerHTML = "O"
+      letterArray.splice(2,1,2);
+      div3.style.pointerEvents = "none";
+      winner.innerHTML = "O Wins";
+      document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+      freezer();
+      player2Score++;
+      player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+      var myTimeout = setTimeout(function () {resetter()}, 5000);
+      return;
+   } if (letterArray[0] === 2 && letterArray[3] === 2 && letterArray[6] == 0) {
+      div7.innerHTML = "O"
+      letterArray.splice(6,1,2);
+      div7.style.pointerEvents = "none";
+      winner.innerHTML = "O Wins";
+      document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+      freezer();
+      player2Score++;
+      player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+      var myTimeout = setTimeout(function () {resetter()}, 5000);
+      return;
+   } if (letterArray[0] === 2 && letterArray[4] === 2 && letterArray[8] === 0) {
+      div9.innerHTML = "O"
+      div9.style.pointerEvents = "none";
+      winner.innerHTML = "O Wins";
+      document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+      freezer();
+      player2Score++;
+      player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+      var myTimeout = setTimeout(function () {resetter()}, 5000);
+      letterArray.splice(8,1,2);
+      return;
+   } if (letterArray[1] === 2 && letterArray[4] === 2 && letterArray[7] === 0) {
+      div8.innerHTML = "O"
+                    div8.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(7,1,2);
+                    return;
+   }if (letterArray[0] === 0 && letterArray[1] === 2 && letterArray[2] === 2) {
+      div3.innerHTML = "O"
+                    div3.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(0,1,2);
+                    return;
+   } if (letterArray[2] === 2 && letterArray[5] === 2 && letterArray[8] === 0) {
+      div9.innerHTML = "O"
+                    div9.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(8,1,2);
+                    return;
+   } if (letterArray[0] === 0 && letterArray[3] === 2 && letterArray[6] === 2) {
+      div1.innerHTML = "O"
+                    div1.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(0,1,2);
+                    return;
+   } if (letterArray[6] === 2 && letterArray[4] === 2 && letterArray[2] === 0) {
+      div3.innerHTML = "O"
+                    div3.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(2,1,2);
+                    return;
+   }if (letterArray[6] === 2 && letterArray[7] === 2 && letterArray[8] === 0) {
+      div9.innerHTML = "O"
+                    div9.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(8,1,2);
+                    return;
+   }if (letterArray[7] === 2 && letterArray[4] === 2 && letterArray[1] === 0) {
+      div3.innerHTML = "O"
+                    div3.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(2,1,2);
+                    return;
+
+
+
+
+
+   }if (letterArray[3] === 2 && letterArray[4] === 2 && letterArray[5] === 0) {
+      div6.innerHTML = "O"
+                    div6.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(5,1,2);
+                    return;
+   }if (letterArray[3] === 0 && letterArray[4] === 2 && letterArray[5] === 2) {
+      div4.innerHTML = "O"
+                    div4.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(3,1,2);
+                    return;
+   }if (letterArray[6] == 0 && letterArray[7] === 2 && letterArray[8] === 2) {
+      div7.innerHTML = "O"
+                    div7.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(6,1,2);
+                    return;
+   } if (letterArray[8] === 2 && letterArray[4] === 2 && letterArray[0] === 0) {
+      div1.innerHTML = "O"
+                    div1.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(0,1,2);
+                    return;
+   }if (letterArray[8] === 2 && letterArray[5] === 2 && letterArray[2] === 0) {
+      div3.innerHTML = "O"
+                    div3.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(2,1,2);
+                    return;
+   }  if (letterArray[0] === 2 && letterArray[1] === 0 && letterArray[2] === 2) {
+      div2.innerHTML = "O"
+                    div2.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(1,1,2);
+                    return;
+   } if (letterArray[0] === 2 && letterArray[3] === 0 && letterArray[6] === 2) {
+      div4.innerHTML = "O"
+                    div4.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(3,1,2);
+                    return;
+   } if (letterArray[6] === 2 && letterArray[7] === 0 && letterArray[8] === 2) {
+      div8.innerHTML = "O"
+                    div8.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(7,1,2);
+                    return;
+   } if (letterArray[8] === 2 && letterArray[5] === 0 && letterArray[2] === 2) {
+      div6.innerHTML = "O"
+                    div6.style.pointerEvents = "none";
+                    winner.innerHTML = "O Wins";
+                    document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                    freezer();
+                    player2Score++;
+                    player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                    var myTimeout = setTimeout(function () {resetter()}, 5000);
+                    letterArray.splice(5,1,2);
+                    return;
+   } if (letterArray[6] === 2 && letterArray[4] === 0 && letterArray[2] === 2) {
+      div5.innerHTML = "O"
+                  div5.style.pointerEvents = "none";
+                  winner.innerHTML = "O Wins";
+                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                  freezer();
+                  player2Score++;
+                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                  var myTimeout = setTimeout(function () {resetter()}, 5000);
+                  letterArray.splice(4,1,2);
+                  return;
+
+
+
+
+
+
+   } if (letterArray[6] == 0 && letterArray[4] === 2 && letterArray[2] === 2) {
+      div6.innerHTML = "O"
+                  div6.style.pointerEvents = "none";
+                  winner.innerHTML = "O Wins";
+                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                  freezer();
+                  player2Score++;
+                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                  var myTimeout = setTimeout(function () {resetter()}, 5000);
+                  letterArray.splice(6,1,2);
+                  return;
+   } if (letterArray[0] === 2 && letterArray[4] === 0 && letterArray[8] === 2) {
+      div5.innerHTML = "O"
+                  div5.style.pointerEvents = "none";
+                  winner.innerHTML = "O Wins";
+                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                  freezer();
+                  player2Score++;
+                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                  var myTimeout = setTimeout(function () {resetter()}, 5000);
+                  letterArray.splice(4,1,2);
+                  return;
+   } if (letterArray[0] === 0 && letterArray[4] === 2 && letterArray[8] === 2) {
+      div1.innerHTML = "O"
+                  div1.style.pointerEvents = "none";
+                  winner.innerHTML = "O Wins";
+                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                  freezer();
+                  player2Score++;
+                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                  var myTimeout = setTimeout(function () {resetter()}, 5000);
+                  letterArray.splice(0,1,2);
+                  return;
+   } if (letterArray[1] === 0 && letterArray[4] === 2 && letterArray[7] === 2) {
+      div2.innerHTML = "O"
+                  div2.style.pointerEvents = "none";
+                  winner.innerHTML = "O Wins";
+                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                  freezer();
+                  player2Score++;
+                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                  var myTimeout = setTimeout(function () {resetter()}, 5000);
+                  letterArray.splice(1,1,2);
+                  return;
+   }if ( letterArray[1] === 2 && letterArray[4] === 0 && letterArray[7] === 2) {
+      div5.innerHTML = "O"
+                  div5.style.pointerEvents = "none";
+                  winner.innerHTML = "O Wins";
+                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                  freezer();
+                  player2Score++;
+                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                  var myTimeout = setTimeout(function () {resetter()}, 5000);
+                  letterArray.splice(4,1,2);
+                  return;
+   }
+
+   // if (slot = 1 & letterArray[0] === 1 & letterArray[1] === 1 & letterArray[2] === 0) {
+   //    div3.innerHTML = "O"
+   //                  letterArray.splice(2,1,2);
+   //                  div3.style.pointerEvents = "none";
+   //                  return;
+   // }
+   // if (slot = 1 & letterArray[0] === 1 & letterArray[3] === 1 & letterArray[6] == 0) {
+   //    div7.innerHTML = "O"
+   //                  letterArray.splice(6,1,2);
+   //                  div7.style.pointerEvents = "none";
+   //                  return;
+   // }
+   // if (slot = 1 & letterArray[0] === 1 & letterArray[4] === 1 & letterArray[8] === 0) {
+   //    div9.innerHTML = "O"
+   //                  div9.style.pointerEvents = "none";
+   //                  letterArray.splice(8,1,2);
+   //                  return;
+   // }
+   // if (slot = 1 & letterArray[1] == 1 & letterArray[4] == 1 & letterArray[7] == 0) {
+   //    div8.innerHTML = "O"
+   //                  div8.style.pointerEvents = "none";
+   //                  letterArray.splice(7,1,2);
+   //                  return;
+   // }
+   // if (slot = 1 & letterArray[0] === 0 & letterArray[1] === 1 & letterArray[2] === 1) {
+   //    div3.innerHTML = "O"
+   //                  div3.style.pointerEvents = "none";
+   //                  letterArray.splice(0,1,2);
+   //                  return;
+   // }
+
+   // if (slot = 1 & letterArray[2] === 1 & letterArray[5] === 1 & letterArray[8] === 0) {
+   //    div9.innerHTML = "O"
+   //                  div9.style.pointerEvents = "none";
+   //                  letterArray.splice(8,1,2);
+   //                  return;
+   // }
+   // if (slot = 1 & letterArray[0] === 0 & letterArray[3] === 1 & letterArray[6] === 1) {
+   //    div1.innerHTML = "O"
+   //                  div1.style.pointerEvents = "none";
+   //                  letterArray.splice(0,1,2);
+   //                  return;
+   // }
+   // if (slot = 1 & letterArray[6] === 1 & letterArray[4] === 1 & letterArray[2] === 0) {
+   //    div3.innerHTML = "O"
+   //                  div3.style.pointerEvents = "none";
+   //                  letterArray.splice(2,1,2);
+   //                  return;
+   // }
+   // if (slot = 1 & letterArray[6] === 1 & letterArray[7] === 1 & letterArray[8] === 0) {
+   //    div9.innerHTML = "O"
+   //                  div9.style.pointerEvents = "none";
+   //                  letterArray.splice(8,1,2);
+   //                  return;
+   // }
+   // if (slot = 1 & letterArray[7] == 1 & letterArray[4] == 1 & letterArray[1] == 0) {
+   //    div3.innerHTML = "O"
+   //                  div3.style.pointerEvents = "none";
+   //                  letterArray.splice(1,1,2);
+   //                  return;
+   // }
+
+
+
+
+
+
+   // if (slot = 1 & letterArray[3] === 1 & letterArray[4] === 1 & letterArray[5] === 0) {
+   //    div6.innerHTML = "O"
+   //                  div6.style.pointerEvents = "none";
+   //                  letterArray.splice(5,1,2);
+   //                  return;
+   // }
+   // if (slot = 1 & letterArray[3] === 0 & letterArray[4] === 1 & letterArray[5] === 1) {
+   //    div4.innerHTML = "O"
+   //                  div4.style.pointerEvents = "none";
+   //                  letterArray.splice(3,1,2);
+   //                  return;
+   // }
+   // if (slot = 1 & letterArray[6] == 0 & letterArray[7] === 1 & letterArray[8] === 1) {
+   //    div7.innerHTML = "O"
+   //                  div7.style.pointerEvents = "none";
+   //                  letterArray.splice(6,1,2);
+   //                  return;
+   // }
+   // if (slot = 1 & letterArray[8] === 1 & letterArray[4] === 1 & letterArray[0] === 0) {
+   //    div1.innerHTML = "O"
+   //                  div1.style.pointerEvents = "none";
+   //                  letterArray.splice(0,1,2);
+   //                  return;
+   // }
+   // if (slot = 1 & letterArray[8] === 1 & letterArray[5] === 1 & letterArray[2] === 0) {
+   //    div3.innerHTML = "O"
+   //                  div3.style.pointerEvents = "none";
+   //                  letterArray.splice(2,1,2);
+   //                  return;
+   // }
+
+   // if (slot = 1 & letterArray[0] === 1 & letterArray[1] === 0 & letterArray[2] === 1) {
+   //    div2.innerHTML = "O"
+   //                  div2.style.pointerEvents = "none";
+   //                  letterArray.splice(1,1,2);
+   //                  return;
+   // }
+   // if (slot = 1 & letterArray[0] === 1 & letterArray[3] === 0 & letterArray[6] === 1) {
+   //    div4.innerHTML = "O"
+   //                  div4.style.pointerEvents = "none";
+   //                  letterArray.splice(3,1,2);
+   //                  return;
+   // }
+   // if (slot = 1 & letterArray[6] === 1 & letterArray[7] === 0 & letterArray[8] === 1) {
+   //    div8.innerHTML = "O"
+   //                  div8.style.pointerEvents = "none";
+   //                  letterArray.splice(7,1,2);
+   //                  return;
+   // }
+   // if (slot = 1 & letterArray[8] === 1 & letterArray[5] === 0 & letterArray[2] === 1) {
+   //    div6.innerHTML = "O"
+   //                  div6.style.pointerEvents = "none";
+   //                  letterArray.splice(5,1,2);
+   //                  return;
+   // }
+   // if (slot = 1 & letterArray[6] === 1 & letterArray[4] === 0 & letterArray[2] === 1) {
+   //    div5.innerHTML = "O"
+   //                div5.style.pointerEvents = "none";
+   //                letterArray.splice(4,1,2);
+   //                return;
+   // }
+
+
+
+
+
+   // if (slot = 1 & letterArray[6] == 0 & letterArray[4] === 1 & letterArray[2] === 1) {
+   //    div7.innerHTML = "O"
+   //                div7.style.pointerEvents = "none";
+   //                letterArray.splice(6,1,2);
+   //                return;
+   // }
+   // if (slot = 1 & letterArray[0] === 1 & letterArray[4] === 0 & letterArray[8] === 1) {
+   //    div5.innerHTML = "O"
+   //                div5.style.pointerEvents = "none";
+   //                letterArray.splice(4,1,2);
+   //                return;
+   // }
+   // if (slot = 1 & letterArray[0] === 0 & letterArray[4] === 1 & letterArray[8] === 1) {
+   //    div1.innerHTML = "O"
+   //                div1.style.pointerEvents = "none";
+   //                letterArray.splice(0,1,2);
+   //                return;
+   // }
+   // if (slot = 1 & letterArray[1] == 1 & letterArray[4] == 0 & letterArray[7] == 1) {
+   //    div5.innerHTML = "O"
+   //                div5.style.pointerEvents = "none";
+   //                letterArray.splice(4,1,2);
+   //                return;
+   // }
+   // if (slot = 1 & letterArray[1] == 0 & letterArray[4] == 1 & letterArray[7] == 1) {
+   //    div2.innerHTML = "O"
+   //                div2.style.pointerEvents = "none";
+   //                letterArray.splice(1,1,2);
+   //                return;
+   // }
+
+
+
+
+
+   if (slot == 1 && letterArray[0] == 0) {
+                div1.innerHTML = "O"
+                div1.style.pointerEvents = "none";
+                letterArray.splice(0,1,2);
+                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                return;
+            }
+             if (slot == 2 && letterArray[1] == 0) {
+                div2.innerHTML = "O"
+                div2.style.pointerEvents = "none";
+                letterArray.splice(1,1,2);
+                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                return;
+            }
+             if (slot == 3 && letterArray[2] == 0) {
+                div3.innerHTML = "O"
+                div3.style.pointerEvents = "none";
+                letterArray.splice(2,1,2);
+                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                return;
+            }
+            if (slot == 4 && letterArray[3] == 0) {
+                div4.innerHTML = "O"
+                div4.style.pointerEvents = "none";
+                letterArray.splice(3,1,2);
+                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                return;
+            }
+             if (slot == 5 && letterArray[4] == 0) {
+                div5.innerHTML = "O"
+                div5.style.pointerEvents = "none";
+                letterArray.splice(4,1,2);
+                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                return;
+            }
+             if (slot == 6 && letterArray[5] == 0) {
+                div6.innerHTML = "O"
+                div6.style.pointerEvents = "none";
+                letterArray.splice(5,1,2);
+                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                return;
+            }
+             if (slot == 7 && letterArray[6] == 0) {
+                div7.innerHTML = "O"
+                div7.style.pointerEvents = "none";
+                letterArray.splice(6,1,2);
+                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                return;
+            }
+             if (slot == 8 && letterArray[7] == 0) {
+                div8.innerHTML = "O"
+                div8.style.pointerEvents = "none";
+                letterArray.splice(7,1,2);
+                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                return;
+            }
+             if (slot == 9 && letterArray[8] == 0) {
+                div9.innerHTML = "O"
+                div9.style.pointerEvents = "none";
+                letterArray.splice(8,1,2);
+                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                return;
+            }
+
+
+
+
+            if (letterArray[0] == 0) {
+                div1.innerHTML = "O"
+                div1.style.pointerEvents = "none";
+                letterArray.splice(0,1,2);
+                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                return;
+            }
+             if (letterArray[1] == 0) {
+                div2.innerHTML = "O"
+                div2.style.pointerEvents = "none";
+                letterArray.splice(1,1,2);
+                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                return;
+            }
+             if (letterArray[2] == 0) {
+                div3.innerHTML = "O"
+                div3.style.pointerEvents = "none";
+                letterArray.splice(2,1,2);
+                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                return;
+            }
+            if (letterArray[3] == 0) {
+                div4.innerHTML = "O"
+                div4.style.pointerEvents = "none";
+                letterArray.splice(3,1,2);
+                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                return;
+            }
+             if (letterArray[4] == 0) {
+                div5.innerHTML = "O"
+                div5.style.pointerEvents = "none";
+                letterArray.splice(4,1,2);
+                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                return;
+            }
+             if (letterArray[5] == 0) {
+                div6.innerHTML = "O"
+                div6.style.pointerEvents = "none";
+                letterArray.splice(5,1,2);
+                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                return;
+            }
+             if (letterArray[6] == 0) {
+                div7.innerHTML = "O"
+                div7.style.pointerEvents = "none";
+                letterArray.splice(6,1,2);
+                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                return;
+            }
+             if (letterArray[7] == 0) {
+                div8.innerHTML = "O"
+                div8.style.pointerEvents = "none";
+                letterArray.splice(7,1,2);
+                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                return;
+            }
+             if (letterArray[8] == 0) {
+                div9.innerHTML = "O"
+                div9.style.pointerEvents = "none";
+                letterArray.splice(8,1,2);
+                player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                return;
+            }
+         
+      }
+
+
+
+
+
 
 
 function gameReplay() {
