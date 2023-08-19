@@ -46,7 +46,7 @@
       <div id="ddiv15"><p></p></div>
       <div id="ddiv16"><p></p></div>
     </div>
-
+    <div id="winner"><p></p></div>
     <div id="divsec1">
         <div id="div1"><p></p></div>
         <div id="div2"><p></p></div>
@@ -63,7 +63,7 @@
         <div id="div8"><p></p></div>
         <div id="div9"><p></p></div>
     </div>
-
+    
     <div id="divsec1mm">
       <div id="div1mm"><p></p></div>
       <div id="div2mm"><p></p></div>
@@ -90,7 +90,6 @@
     <div id="prompt2"><p></p></div>
     <div id="prompt3"><p></p></div>
     <div id="prompt5"><h1></h1></div>
-    <div id="winner"><p></p></div>
     <footer id="footy" style="font-size: 30px; text-align: center;"></footer>
     <script>
         var letterArray = [0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -146,6 +145,7 @@
                 ddiv13.style.pointerEvents = "none";
                 ddiv14.style.pointerEvents = "none";
                 ddiv15.style.pointerEvents = "none";
+                ddiv16.style.pointerEvents = "none";
             }
 
             function tie() {
@@ -213,6 +213,7 @@
                         ddiv14.innerHTML = "";
                         ddiv15.innerHTML = "";
                         ddiv16.innerHTML = "";
+
                         document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
                         letterArray.splice(0,9,0,0,0,0,0,0,0,0,0)
                         letterArray2.splice(0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
@@ -5268,6 +5269,10 @@ function gameReplay() {
             document.getElementById("prompt").innerHTML = `${letterArray2}`;
          }
          if (letterArray2[0] === 1 && (letterArray2[1] === 1) && (letterArray2[2] === 1 && (letterArray2[3] === 1))) {
+            // ddiv1.style.border = "3px solid cyan";
+            // ddiv2.style.border = "3px solid cyan";
+            // ddiv3.style.border = "3px solid cyan";
+            // ddiv4.style.border = "3px solid cyan";
             player1ScoreVsCPU++;
             player1Score++;
             player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -5277,6 +5282,10 @@ function gameReplay() {
             var myTimeout = setTimeout(function () {resetter2()}, 5000);
          }
          if (letterArray2[0] === 1 && (letterArray2[4] === 1) && (letterArray2[8] === 1 && (letterArray2[12] === 1))) {
+            ddiv1.style.border = "3px solid rgb(41, 145, 205)";
+            ddiv5.style.border = "3px solid rgb(41, 145, 205)";
+            ddiv9.style.border = "3px solid rgb(41, 145, 205)";
+            ddiv13.style.border = "3px solid rgb(41, 145, 205)";
             player1ScoreVsCPU++;
             player1Score++;
             player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
