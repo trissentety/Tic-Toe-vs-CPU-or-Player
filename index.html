@@ -2632,9 +2632,9 @@ function easyPlayer() {
             function scoreReset() {
                if (player2Score === 5 & btnclick7 == 1) {
                   player1ScoreVsCPU = 0;
-                  document.getElementById("CPUSays").innerHTML = 'Game Over!"'
+                  document.getElementById("winner").innerHTML = 'Game Over!"'
                   var myTimeout = setTimeout(function () {
-                     document.getElementById("CPUSays").innerHTML = "";
+                     document.getElementById("winner").innerHTML = "";
                   }, 10000)
 
                }
