@@ -1237,7 +1237,7 @@ function easyPlayer() {
 
    } if (letterArray[6] == 0 && letterArray[4] === 2 && letterArray[2] === 2 && winCheck === 0) {
       div6.innerHTML = "O"
-                  div6.style.pointerEvents = "none";
+                  div7.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
                   document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                   freezer();
@@ -3113,8 +3113,8 @@ function easyPlayer() {
                }
             case 21:
                if (slot = 1 & letterArray[6] == 0 & letterArray[4] === 2 & letterArray[2] === 2 && winCheck === 0 ) {
-                  div6.innerHTML = "O"
-                  div6.style.pointerEvents = "none";
+                  div7.innerHTML = "O"
+                  div7.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
                   document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                   freezer();
@@ -3401,7 +3401,7 @@ function easyPlayer() {
                }
 
                case 27:
-               if (slot = 1 & letterArray[0] === 1 && letterArray[4] !== 2) {
+               if (slot = 1 & letterArray[0] === 1 && letterArray[4] === 0) {
                   div5.innerHTML = "O"
                   div5.style.pointerEvents = "none";
                   letterArray.splice(4,1,2);
@@ -3409,7 +3409,7 @@ function easyPlayer() {
                   break;
                }
                case 28:
-               if (slot = 1 & letterArray[2] === 1 && letterArray[4] !== 2) {
+               if (slot = 1 & letterArray[2] === 1 && letterArray[4] === 0) {
                   div5.innerHTML = "O"
                   div5.style.pointerEvents = "none";
                   letterArray.splice(4,1,2);
@@ -3417,7 +3417,7 @@ function easyPlayer() {
                   break;
                }
                case 29:
-               if (slot = 1 & letterArray[6] === 1 && letterArray[4] !== 2 ) {
+               if (slot = 1 & letterArray[6] === 1 && letterArray[4] === 0 ) {
                   div5.innerHTML = "O"
                   div5.style.pointerEvents = "none";
                   letterArray.splice(4,1,2);
@@ -3425,7 +3425,7 @@ function easyPlayer() {
                   break;
                }
                case 30:
-               if (slot = 1 & letterArray[8] === 1 && letterArray[4] !== 2) {
+               if (slot = 1 & letterArray[8] === 1 && letterArray[4] === 0) {
                   div5.innerHTML = "O"
                   div5.style.pointerEvents = "none";
                   letterArray.splice(4,1,2);
@@ -3836,7 +3836,7 @@ function cpuMTurn () {
 
    } if (letterArray[6] == 0 && letterArray[4] === 2 && letterArray[2] === 2 && winCheck === 0) {
       div6.innerHTML = "O"
-                  div6.style.pointerEvents = "none";
+                  div7.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
                   document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                   freezer();
