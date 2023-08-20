@@ -2707,7 +2707,7 @@ function easyPlayer() {
       //   if (slot2 > 7) {
             switch (slot) {
             case 1:
-                if (slot = 1 & letterArray[0] === 2 & letterArray[1] === 2 & letterArray[2] === 0 ) {
+                if (slot = 1 & letterArray[0] === 2 & letterArray[1] === 2 & letterArray[2] === 0 && winCheck === 0 ) {
                     div3.innerHTML = "O"
                     letterArray.splice(2,1,2);
                     div3.style.pointerEvents = "none";
@@ -2720,7 +2720,7 @@ function easyPlayer() {
                     break;
                 }
             case 2:
-                if (slot = 1 & letterArray[0] === 2 & letterArray[3] === 2 & letterArray[6] == 0 ) {
+                if (slot = 1 & letterArray[0] === 2 & letterArray[3] === 2 & letterArray[6] == 0 && winCheck === 0 ) {
                     div7.innerHTML = "O"
                     letterArray.splice(6,1,2);
                     div7.style.pointerEvents = "none";
@@ -2733,7 +2733,7 @@ function easyPlayer() {
                     break;
                 }
             case 3:
-                if (slot = 1 & letterArray[0] === 2 & letterArray[4] === 2 & letterArray[8] === 0 ) {
+                if (slot = 1 & letterArray[0] === 2 & letterArray[4] === 2 & letterArray[8] === 0 && winCheck === 0 ) {
                     div9.innerHTML = "O"
                     div9.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -2748,7 +2748,7 @@ function easyPlayer() {
                 
                 
             case 4:
-                if (slot = 1 & letterArray[1] === 2 & letterArray[4] === 2 & letterArray[7] === 0 ) {
+                if (slot = 1 & letterArray[1] === 2 & letterArray[4] === 2 & letterArray[7] === 0 && winCheck === 0 ) {
                     div8.innerHTML = "O"
                     div8.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -2761,7 +2761,7 @@ function easyPlayer() {
                     break;
                 }
             case 5:
-                if (slot = 1 & letterArray[0] === 0 & letterArray[1] === 2 & letterArray[2] === 2 ) {
+                if (slot = 1 & letterArray[0] === 0 & letterArray[1] === 2 & letterArray[2] === 2 && winCheck === 0 ) {
                     div3.innerHTML = "O"
                     div3.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -2774,7 +2774,7 @@ function easyPlayer() {
                     break;
                 }
             case 6:
-                if (slot = 1 & letterArray[2] === 2 & letterArray[5] === 2 & letterArray[8] === 0 ) {
+                if (slot = 1 & letterArray[2] === 2 & letterArray[5] === 2 & letterArray[8] === 0 && winCheck === 0 ) {
                     div9.innerHTML = "O"
                     div9.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -2789,7 +2789,7 @@ function easyPlayer() {
                 
                 
             case 7:
-                if (slot = 1 & letterArray[0] === 0 & letterArray[3] === 2 & letterArray[6] === 2 ) {
+                if (slot = 1 & letterArray[0] === 0 & letterArray[3] === 2 & letterArray[6] === 2 && winCheck === 0 ) {
                     div1.innerHTML = "O"
                     div1.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -2802,7 +2802,7 @@ function easyPlayer() {
                     break;
                 }
             case 8:
-                if (slot = 1 & letterArray[6] === 2 & letterArray[4] === 2 & letterArray[2] === 0 ) {
+                if (slot = 1 & letterArray[6] === 2 & letterArray[4] === 2 & letterArray[2] === 0 && winCheck === 0 ) {
                     div3.innerHTML = "O"
                     div3.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -2815,7 +2815,7 @@ function easyPlayer() {
                     break;
                 }
             case 9:
-                if (slot = 1 & letterArray[6] === 2 & letterArray[7] === 2 & letterArray[8] === 0 ) {
+                if (slot = 1 & letterArray[6] === 2 & letterArray[7] === 2 & letterArray[8] === 0 && winCheck === 0 ) {
                     div9.innerHTML = "O"
                     div9.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -2830,7 +2830,7 @@ function easyPlayer() {
 
 
             case 10:
-                if (slot = 1 & letterArray[7] === 2 & letterArray[4] === 2 & letterArray[1] === 0 ) {
+                if (slot = 1 & letterArray[7] === 2 & letterArray[4] === 2 & letterArray[1] === 0 && winCheck === 0 ) {
                     div3.innerHTML = "O"
                     div3.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -2843,7 +2843,7 @@ function easyPlayer() {
                     break;
                 }
             case 11:
-                if (slot = 1 & letterArray[3] == 2 & letterArray[4] == 2 & letterArray[5] == 0 ) {
+                if (slot = 1 & letterArray[3] == 2 & letterArray[4] == 2 & letterArray[5] == 0 && winCheck === 0 ) {
                     div6.innerHTML = "O"
                     div6.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -2856,7 +2856,7 @@ function easyPlayer() {
                     break;
                 }
             case 12:
-                if (slot = 1 & letterArray[3] === 0 & letterArray[4] === 2 & letterArray[5] === 2 ) {
+                if (slot = 1 & letterArray[3] === 0 & letterArray[4] === 2 & letterArray[5] === 2 && winCheck === 0 ) {
                     div4.innerHTML = "O"
                     div4.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -2871,7 +2871,7 @@ function easyPlayer() {
 
 
             case 13:
-                if (slot = 1 & letterArray[6] === 0 & letterArray[7] === 2 & letterArray[8] === 2 ) {
+                if (slot = 1 & letterArray[6] === 0 & letterArray[7] === 2 & letterArray[8] === 2 && winCheck === 0 ) {
                     div7.innerHTML = "O"
                     div7.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -2884,7 +2884,7 @@ function easyPlayer() {
                     break;
                 }
             case 14:
-                if (slot = 1 & letterArray[8] === 2 & letterArray[4] === 2 & letterArray[0] === 0 ) {
+                if (slot = 1 & letterArray[8] === 2 & letterArray[4] === 2 & letterArray[0] === 0 && winCheck === 0 ) {
                     div1.innerHTML = "O"
                     div1.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -2897,7 +2897,7 @@ function easyPlayer() {
                     break;
                 }
             case 15:
-                if (slot = 1 & letterArray[8] === 2 & letterArray[5] === 2 & letterArray[2] === 0 ) {
+                if (slot = 1 & letterArray[8] === 2 & letterArray[5] === 2 & letterArray[2] === 0 && winCheck === 0 ) {
                     div3.innerHTML = "O"
                     div3.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -2912,7 +2912,7 @@ function easyPlayer() {
 
 
             case 16:
-                if (slot = 1 & letterArray[0] == 2 & letterArray[1] == 0 & letterArray[2] == 2 ) {
+                if (slot = 1 & letterArray[0] == 2 & letterArray[1] == 0 & letterArray[2] == 2 && winCheck === 0 ) {
                     div2.innerHTML = "O"
                     div2.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -2925,7 +2925,7 @@ function easyPlayer() {
                     break;
                 }
             case 17:
-                if (slot = 1 & letterArray[0] === 2 & letterArray[3] === 0 & letterArray[6] === 2 ) {
+                if (slot = 1 & letterArray[0] === 2 & letterArray[3] === 0 & letterArray[6] === 2 && winCheck === 0 ) {
                     div4.innerHTML = "O"
                     div4.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -2938,7 +2938,7 @@ function easyPlayer() {
                     break;
                 }
             case 18:
-                if (slot = 1 & letterArray[6] === 2 & letterArray[7] === 0 & letterArray[8] === 2 ) {
+                if (slot = 1 & letterArray[6] === 2 & letterArray[7] === 0 & letterArray[8] === 2 && winCheck === 0 ) {
                     div8.innerHTML = "O"
                     div8.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -2951,7 +2951,7 @@ function easyPlayer() {
                     break;
                 }
             case 19:
-                if (slot = 1 & letterArray[8] === 2 & letterArray[5] === 0 & letterArray[2] === 2 ) {
+                if (slot = 1 & letterArray[8] === 2 & letterArray[5] === 0 & letterArray[2] === 2 && winCheck === 0 ) {
                     div6.innerHTML = "O"
                     div6.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -2964,7 +2964,7 @@ function easyPlayer() {
                     break;
                 }
             case 20:
-               if (slot = 1 & letterArray[6] === 2 & letterArray[4] === 0 & letterArray[2] === 2 ) {
+               if (slot = 1 & letterArray[6] === 2 & letterArray[4] === 0 & letterArray[2] === 2 && winCheck === 0 ) {
                   div5.innerHTML = "O"
                   div5.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
@@ -2977,7 +2977,7 @@ function easyPlayer() {
                   break;
                }
             case 21:
-               if (slot = 1 & letterArray[6] == 0 & letterArray[4] === 2 & letterArray[2] === 2 ) {
+               if (slot = 1 & letterArray[6] == 0 & letterArray[4] === 2 & letterArray[2] === 2 && winCheck === 0 ) {
                   div6.innerHTML = "O"
                   div6.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
@@ -2990,7 +2990,7 @@ function easyPlayer() {
                   break;
                }
                case 22:
-               if (slot = 1 & letterArray[0] === 2 & letterArray[4] === 0 & letterArray[8] === 2 ) {
+               if (slot = 1 & letterArray[0] === 2 & letterArray[4] === 0 & letterArray[8] === 2 && winCheck === 0 ) {
                   div5.innerHTML = "O"
                   div5.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
@@ -3003,7 +3003,7 @@ function easyPlayer() {
                   break;
                }
                case 23:
-               if (slot = 1 & letterArray[0] === 0 & letterArray[4] === 2 & letterArray[8] === 2 ) {
+               if (slot = 1 & letterArray[0] === 0 & letterArray[4] === 2 & letterArray[8] === 2 && winCheck === 0 ) {
                   div1.innerHTML = "O"
                   div1.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
@@ -3016,7 +3016,7 @@ function easyPlayer() {
                   break;
                }
                case 24:
-               if (letterArray[1] == 0 & letterArray[4] == 2 & letterArray[7] == 2 ) {
+               if (letterArray[1] == 0 & letterArray[4] == 2 & letterArray[7] == 2 && winCheck === 0 ) {
                   div2.innerHTML = "O"
                   div2.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
@@ -3029,7 +3029,7 @@ function easyPlayer() {
                   break;
                }
                case 25:
-               if (slot = 1 & letterArray[1] === 2 & letterArray[4] === 0 & letterArray[7] === 2 ) {
+               if (slot = 1 & letterArray[1] === 2 & letterArray[4] === 0 & letterArray[7] === 2 && winCheck === 0 ) {
                   div5.innerHTML = "O"
                   div5.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
@@ -3041,6 +3041,7 @@ function easyPlayer() {
                   letterArray.splice(4,1,2);
                   break;
                }
+               winCheck = 0;
 
 
 
@@ -3264,6 +3265,39 @@ function easyPlayer() {
                   break;
                }
 
+               case 27:
+               if (slot = 1 & letterArray[0] === 1 && letterArray[4] !== 2) {
+                  div5.innerHTML = "O"
+                  div5.style.pointerEvents = "none";
+                  letterArray.splice(4,1,2);
+                  document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                  break;
+               }
+               case 28:
+               if (slot = 1 & letterArray[2] === 1 && letterArray[4] !== 2) {
+                  div5.innerHTML = "O"
+                  div5.style.pointerEvents = "none";
+                  letterArray.splice(4,1,2);
+                  document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                  break;
+               }
+               case 29:
+               if (slot = 1 & letterArray[6] === 1 && letterArray[4] !== 2 ) {
+                  div5.innerHTML = "O"
+                  div5.style.pointerEvents = "none";
+                  letterArray.splice(4,1,2);
+                  document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                  break;
+               }
+               case 30:
+               if (slot = 1 & letterArray[8] === 1 && letterArray[4] !== 2) {
+                  div5.innerHTML = "O"
+                  div5.style.pointerEvents = "none";
+                  letterArray.splice(4,1,2);
+                  document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+                  break;
+               }
+
 
 
 
@@ -3423,7 +3457,7 @@ function cpuMTurn () {
 // if (slot2 <= 7) {
 
 
-   if (letterArray[0] === 2 && letterArray[1] === 2 && letterArray[2] === 0) {
+   if (letterArray[0] === 2 && letterArray[1] === 2 && letterArray[2] === 0 && winCheck === 0) {
       div3.innerHTML = "O"
       letterArray.splice(2,1,2);
       div3.style.pointerEvents = "none";
@@ -3434,7 +3468,7 @@ function cpuMTurn () {
       player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
       var myTimeout = setTimeout(function () {resetter()}, 5000);
       return;
-   } if (letterArray[0] === 2 && letterArray[3] === 2 && letterArray[6] == 0) {
+   } if (letterArray[0] === 2 && letterArray[3] === 2 && letterArray[6] == 0 && winCheck === 0) {
       div7.innerHTML = "O"
       letterArray.splice(6,1,2);
       div7.style.pointerEvents = "none";
@@ -3445,7 +3479,7 @@ function cpuMTurn () {
       player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
       var myTimeout = setTimeout(function () {resetter()}, 5000);
       return;
-   } if (letterArray[0] === 2 && letterArray[4] === 2 && letterArray[8] === 0) {
+   } if (letterArray[0] === 2 && letterArray[4] === 2 && letterArray[8] === 0 && winCheck === 0) {
       div9.innerHTML = "O"
       div9.style.pointerEvents = "none";
       winner.innerHTML = "O Wins";
@@ -3456,7 +3490,7 @@ function cpuMTurn () {
       var myTimeout = setTimeout(function () {resetter()}, 5000);
       letterArray.splice(8,1,2);
       return;
-   } if (letterArray[1] === 2 && letterArray[4] === 2 && letterArray[7] === 0) {
+   } if (letterArray[1] === 2 && letterArray[4] === 2 && letterArray[7] === 0 && winCheck === 0) {
       div8.innerHTML = "O"
                     div8.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -3467,7 +3501,7 @@ function cpuMTurn () {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(7,1,2);
                     return;
-   }if (letterArray[0] === 0 && letterArray[1] === 2 && letterArray[2] === 2) {
+   }if (letterArray[0] === 0 && letterArray[1] === 2 && letterArray[2] === 2 && winCheck === 0) {
       div3.innerHTML = "O"
                     div3.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -3478,7 +3512,7 @@ function cpuMTurn () {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(0,1,2);
                     return;
-   } if (letterArray[2] === 2 && letterArray[5] === 2 && letterArray[8] === 0) {
+   } if (letterArray[2] === 2 && letterArray[5] === 2 && letterArray[8] === 0 && winCheck === 0) {
       div9.innerHTML = "O"
                     div9.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -3489,7 +3523,7 @@ function cpuMTurn () {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(8,1,2);
                     return;
-   } if (letterArray[0] === 0 && letterArray[3] === 2 && letterArray[6] === 2) {
+   } if (letterArray[0] === 0 && letterArray[3] === 2 && letterArray[6] === 2 && winCheck === 0) {
       div1.innerHTML = "O"
                     div1.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -3500,7 +3534,7 @@ function cpuMTurn () {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(0,1,2);
                     return;
-   } if (letterArray[6] === 2 && letterArray[4] === 2 && letterArray[2] === 0) {
+   } if (letterArray[6] === 2 && letterArray[4] === 2 && letterArray[2] === 0 && winCheck === 0) {
       div3.innerHTML = "O"
                     div3.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -3511,7 +3545,7 @@ function cpuMTurn () {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(2,1,2);
                     return;
-   }if (letterArray[6] === 2 && letterArray[7] === 2 && letterArray[8] === 0) {
+   }if (letterArray[6] === 2 && letterArray[7] === 2 && letterArray[8] === 0 && winCheck === 0) {
       div9.innerHTML = "O"
                     div9.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -3522,7 +3556,7 @@ function cpuMTurn () {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(8,1,2);
                     return;
-   }if (letterArray[7] === 2 && letterArray[4] === 2 && letterArray[1] === 0) {
+   }if (letterArray[7] === 2 && letterArray[4] === 2 && letterArray[1] === 0 && winCheck === 0) {
       div3.innerHTML = "O"
                     div3.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -3538,7 +3572,7 @@ function cpuMTurn () {
 
 
 
-   }if (letterArray[3] === 2 && letterArray[4] === 2 && letterArray[5] === 0) {
+   }if (letterArray[3] === 2 && letterArray[4] === 2 && letterArray[5] === 0 && winCheck === 0) {
       div6.innerHTML = "O"
                     div6.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -3549,7 +3583,7 @@ function cpuMTurn () {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(5,1,2);
                     return;
-   }if (letterArray[3] === 0 && letterArray[4] === 2 && letterArray[5] === 2) {
+   }if (letterArray[3] === 0 && letterArray[4] === 2 && letterArray[5] === 2 && winCheck === 0) {
       div4.innerHTML = "O"
                     div4.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -3560,7 +3594,7 @@ function cpuMTurn () {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(3,1,2);
                     return;
-   }if (letterArray[6] == 0 && letterArray[7] === 2 && letterArray[8] === 2) {
+   }if (letterArray[6] == 0 && letterArray[7] === 2 && letterArray[8] === 2 && winCheck === 0) {
       div7.innerHTML = "O"
                     div7.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -3571,7 +3605,7 @@ function cpuMTurn () {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(6,1,2);
                     return;
-   } if (letterArray[8] === 2 && letterArray[4] === 2 && letterArray[0] === 0) {
+   } if (letterArray[8] === 2 && letterArray[4] === 2 && letterArray[0] === 0 && winCheck === 0) {
       div1.innerHTML = "O"
                     div1.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -3582,7 +3616,7 @@ function cpuMTurn () {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(0,1,2);
                     return;
-   }if (letterArray[8] === 2 && letterArray[5] === 2 && letterArray[2] === 0) {
+   }if (letterArray[8] === 2 && letterArray[5] === 2 && letterArray[2] === 0 && winCheck === 0) {
       div3.innerHTML = "O"
                     div3.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -3593,7 +3627,7 @@ function cpuMTurn () {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(2,1,2);
                     return;
-   }  if (letterArray[0] === 2 && letterArray[1] === 0 && letterArray[2] === 2) {
+   }  if (letterArray[0] === 2 && letterArray[1] === 0 && letterArray[2] === 2 && winCheck === 0) {
       div2.innerHTML = "O"
                     div2.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -3604,7 +3638,7 @@ function cpuMTurn () {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(1,1,2);
                     return;
-   } if (letterArray[0] === 2 && letterArray[3] === 0 && letterArray[6] === 2) {
+   } if (letterArray[0] === 2 && letterArray[3] === 0 && letterArray[6] === 2 && winCheck === 0) {
       div4.innerHTML = "O"
                     div4.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -3615,7 +3649,7 @@ function cpuMTurn () {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(3,1,2);
                     return;
-   } if (letterArray[6] === 2 && letterArray[7] === 0 && letterArray[8] === 2) {
+   } if (letterArray[6] === 2 && letterArray[7] === 0 && letterArray[8] === 2 && winCheck === 0) {
       div8.innerHTML = "O"
                     div8.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -3626,7 +3660,7 @@ function cpuMTurn () {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(7,1,2);
                     return;
-   } if (letterArray[8] === 2 && letterArray[5] === 0 && letterArray[2] === 2) {
+   } if (letterArray[8] === 2 && letterArray[5] === 0 && letterArray[2] === 2 && winCheck === 0) {
       div6.innerHTML = "O"
                     div6.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -3637,7 +3671,7 @@ function cpuMTurn () {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(5,1,2);
                     return;
-   } if (letterArray[6] === 2 && letterArray[4] === 0 && letterArray[2] === 2) {
+   } if (letterArray[6] === 2 && letterArray[4] === 0 && letterArray[2] === 2 && winCheck === 0) {
       div5.innerHTML = "O"
                   div5.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
@@ -3654,7 +3688,7 @@ function cpuMTurn () {
 
 
 
-   } if (letterArray[6] == 0 && letterArray[4] === 2 && letterArray[2] === 2) {
+   } if (letterArray[6] == 0 && letterArray[4] === 2 && letterArray[2] === 2 && winCheck === 0) {
       div6.innerHTML = "O"
                   div6.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
@@ -3665,7 +3699,7 @@ function cpuMTurn () {
                   var myTimeout = setTimeout(function () {resetter()}, 5000);
                   letterArray.splice(6,1,2);
                   return;
-   } if (letterArray[0] === 2 && letterArray[4] === 0 && letterArray[8] === 2) {
+   } if (letterArray[0] === 2 && letterArray[4] === 0 && letterArray[8] === 2 && winCheck === 0) {
       div5.innerHTML = "O"
                   div5.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
@@ -3676,7 +3710,7 @@ function cpuMTurn () {
                   var myTimeout = setTimeout(function () {resetter()}, 5000);
                   letterArray.splice(4,1,2);
                   return;
-   } if (letterArray[0] === 0 && letterArray[4] === 2 && letterArray[8] === 2) {
+   } if (letterArray[0] === 0 && letterArray[4] === 2 && letterArray[8] === 2 && winCheck === 0) {
       div1.innerHTML = "O"
                   div1.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
@@ -3687,7 +3721,7 @@ function cpuMTurn () {
                   var myTimeout = setTimeout(function () {resetter()}, 5000);
                   letterArray.splice(0,1,2);
                   return;
-   } if (letterArray[1] === 0 && letterArray[4] === 2 && letterArray[7] === 2) {
+   } if (letterArray[1] === 0 && letterArray[4] === 2 && letterArray[7] === 2 && winCheck === 0) {
       div2.innerHTML = "O"
                   div2.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
@@ -3698,7 +3732,7 @@ function cpuMTurn () {
                   var myTimeout = setTimeout(function () {resetter()}, 5000);
                   letterArray.splice(1,1,2);
                   return;
-   }if ( letterArray[1] === 2 && letterArray[4] === 0 && letterArray[7] === 2) {
+   }if ( letterArray[1] === 2 && letterArray[4] === 0 && letterArray[7] === 2 && winCheck === 0) {
       div5.innerHTML = "O"
                   div5.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
@@ -3878,7 +3912,7 @@ function cpuMTurn () {
 
 
 
-
+   winCheck = 0;
    if (slot == 1 && letterArray[0] == 0) {
                 div1.innerHTML = "O"
                 div1.style.pointerEvents = "none";
