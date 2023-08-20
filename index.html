@@ -21,6 +21,27 @@
     <div id="player1"><h2></h2></div>
     <div id="player2"><h2></h2></div>
     <div id="padding"><h2></h2></div>
+    <div id="masterHealth">
+    <div id="health2">
+      <div id="health221"></div>
+      <div id="health222"></div>
+      <div id="health223"></div>
+      <div id="health224"></div>
+      <div id="health225"></div>
+    </div> 
+
+    <div id="health">
+      <div id="health11"></div>
+      <div id="health12"></div>
+      <div id="health13"></div>
+      <div id="health14"></div>
+      <div id="health15"></div>
+    </div>
+   </div>
+
+
+
+
 
     <div id="div4sec1">
       <div id="ddiv1"><p></p></div>
@@ -46,23 +67,25 @@
       <div id="ddiv15"><p></p></div>
       <div id="ddiv16"><p></p></div>
     </div>
+    <div id="masterdiv">
+      <div id="divsec1">
+         <div id="div1"><p></p></div>
+         <div id="div2"><p></p></div>
+         <div id="div3"><p></p></div>
+     </div>
+     <div id="divsec2">
+         <div id="div4"><p></p></div>
+         <div id="div5"><p></p></div>
+         
+         <div id="div6"><p></p></div>
+     </div>
+     <div id="divsec3">
+         <div id="div7"><p></p></div>
+         <div id="div8"><p></p></div>
+         <div id="div9"><p></p></div>
+     </div>
+    </div>
     
-    <div id="divsec1">
-        <div id="div1"><p></p></div>
-        <div id="div2"><p></p></div>
-        <div id="div3"><p></p></div>
-    </div>
-    <div id="divsec2">
-        <div id="div4"><p></p></div>
-        <div id="div5"><p></p></div>
-        
-        <div id="div6"><p></p></div>
-    </div>
-    <div id="divsec3">
-        <div id="div7"><p></p></div>
-        <div id="div8"><p></p></div>
-        <div id="div9"><p></p></div>
-    </div>
     <div id="winner"><p></p></div>
     
     <div id="divsec1mm">
@@ -81,6 +104,7 @@
       <div id="div9mm"><p></p></div>
   </div>
     <div id="player1score"><h2>Player 1's Score: <br> 0</h2></div>
+
     <div id="player2score"><h2>Player 2's Score: <br> 0</h2></div>
     <div id="divsec3">
         <button id="btn">Reset & Switch Start Player</button>
@@ -120,6 +144,9 @@
         var gameMoves = 0;
         var gameNumber = 0;
 
+      //   if(player1Score === 1) {
+      //    document.getElementById("")
+      //   }
 
         function freezer() {
                 div1.style.pointerEvents = "none";
@@ -2631,6 +2658,49 @@ function easyPlayer() {
 
 
             function scoreReset() {
+            if(player1Score === 0 && player2Score === 0) {
+               document.getElementById("health221").style.backgroundColor = "red";
+               document.getElementById("health222").style.backgroundColor = "red";
+               document.getElementById("health223").style.backgroundColor = "red";
+               document.getElementById("health224").style.backgroundColor = "red";
+               document.getElementById("health225").style.backgroundColor = "red";
+               document.getElementById("health11").style.backgroundColor = "red";
+               document.getElementById("health12").style.backgroundColor = "red";
+               document.getElementById("health13").style.backgroundColor = "red";
+               document.getElementById("health14").style.backgroundColor = "red";
+               document.getElementById("health15").style.backgroundColor = "red";
+            } 
+
+            if(player1Score === 1) {
+               document.getElementById("health221").style.backgroundColor = "black";
+            } 
+            if(player2Score === 1) {
+               document.getElementById("health11").style.backgroundColor = "black";
+            } 
+            if(player1Score === 2) {
+               document.getElementById("health222").style.backgroundColor = "black";
+            } 
+            if(player2Score === 2) {
+               document.getElementById("health12").style.backgroundColor = "black";
+            } 
+            if(player1Score === 3) {
+               document.getElementById("health223").style.backgroundColor = "black";
+            } 
+            if(player2Score === 3) {
+               document.getElementById("health13").style.backgroundColor = "black";
+            } 
+            if(player1Score === 4) {
+               document.getElementById("health224").style.backgroundColor = "black";
+            } 
+            if(player2Score === 4) {
+               document.getElementById("health14").style.backgroundColor = "black";
+            } 
+            if(player1Score === 5) {
+               document.getElementById("health225").style.backgroundColor = "black";
+            } 
+            if(player2Score === 5) {
+               document.getElementById("health15").style.backgroundColor = "black";
+            } 
                if (player2Score === 5 & btnclick7 == 1) {
                   player1ScoreVsCPU = 0;
                   document.getElementById("winner").innerHTML = 'Game Over!'
@@ -2685,8 +2755,12 @@ function easyPlayer() {
         var currentLetter = 0;
         if (currentLetter % 2 == 0) {
             player2s.innerHTML="Player 2's turn";
+            document.getElementById("health").style.display = "flex";
+            document.getElementById("health2").style.display = "none";
         }else {
             player2s.innerHTML="Player 1's turn";
+            document.getElementById("health2").style.display = "flex";
+            document.getElementById("health").style.display = "none";
         }
         function boss() {
             
@@ -4103,18 +4177,23 @@ function gameReplay() {
 
             
             var prompt5 = document.getElementById("prompt5");
-               
+
    
             div1.addEventListener("click", function div1y() {
                gameReplay();
                CPUChat()
                scoreReset();
                 if (currentLetter % 2 == 0) {
+                document.getElementById("health").style.display = "flex";
+                document.getElementById("health2").style.display = "none";
+                player2s.innerHTML="Player 1's turn";
                 player2s.style.float = "right";
                 player2s.innerHTML="Player 2's turn o";
             }else {
                 player2s.style.float = "left";
                 player2s.innerHTML="Player 1's turn x";
+                document.getElementById("health2").style.display = "flex";
+                document.getElementById("health").style.display = "none";
             }
             if (currentSwitch === 1 && currentLetter % 2 == 0) {
                player2s.style.float = "left";
@@ -4259,11 +4338,16 @@ function gameReplay() {
                CPUChat()
                scoreReset();
                if (currentLetter % 2 == 0) {
+                document.getElementById("health").style.display = "flex";
+                document.getElementById("health2").style.display = "none";
+                player2s.innerHTML="Player 1's turn";
                 player2s.style.float = "right";
                 player2s.innerHTML="Player 2's turn o";
             }else {
                 player2s.style.float = "left";
                 player2s.innerHTML="Player 1's turn x";
+                document.getElementById("health2").style.display = "flex";
+                document.getElementById("health").style.display = "none";
             }
             if (currentSwitch === 1 && currentLetter % 2 == 0) {
                player2s.style.float = "left";
@@ -4377,11 +4461,16 @@ function gameReplay() {
                CPUChat()
                scoreReset();
                if (currentLetter % 2 == 0) {
+                document.getElementById("health").style.display = "flex";
+                document.getElementById("health2").style.display = "none";
+                player2s.innerHTML="Player 1's turn";
                 player2s.style.float = "right";
                 player2s.innerHTML="Player 2's turn o";
             }else {
                 player2s.style.float = "left";
                 player2s.innerHTML="Player 1's turn x";
+                document.getElementById("health2").style.display = "flex";
+                document.getElementById("health").style.display = "none";
             }
             if (currentSwitch === 1 && currentLetter % 2 == 0) {
                player2s.style.float = "left";
@@ -4512,11 +4601,16 @@ function gameReplay() {
                CPUChat()
                scoreReset();
                if (currentLetter % 2 == 0) {
+                document.getElementById("health").style.display = "flex";
+                document.getElementById("health2").style.display = "none";
+                player2s.innerHTML="Player 1's turn";
                 player2s.style.float = "right";
                 player2s.innerHTML="Player 2's turn o";
             }else {
                 player2s.style.float = "left";
                 player2s.innerHTML="Player 1's turn x";
+                document.getElementById("health2").style.display = "flex";
+                document.getElementById("health").style.display = "none";
             }
             if (currentSwitch === 1 && currentLetter % 2 == 0) {
                player2s.style.float = "left";
@@ -4629,11 +4723,16 @@ function gameReplay() {
                CPUChat()
                scoreReset();
                if (currentLetter % 2 == 0) {
+                document.getElementById("health").style.display = "flex";
+                document.getElementById("health2").style.display = "none";
+                player2s.innerHTML="Player 1's turn";
                 player2s.style.float = "right";
                 player2s.innerHTML="Player 2's turn o";
             }else {
                 player2s.style.float = "left";
                 player2s.innerHTML="Player 1's turn x";
+                document.getElementById("health2").style.display = "flex";
+                document.getElementById("health").style.display = "none";
             }
             if (currentSwitch === 1 && currentLetter % 2 == 0) {
                player2s.style.float = "left";
@@ -4785,11 +4884,16 @@ function gameReplay() {
                CPUChat()
                scoreReset();
                if (currentLetter % 2 == 0) {
+                document.getElementById("health").style.display = "flex";
+                document.getElementById("health2").style.display = "none";
+                player2s.innerHTML="Player 1's turn";
                 player2s.style.float = "right";
                 player2s.innerHTML="Player 2's turn o";
             }else {
                 player2s.style.float = "left";
                 player2s.innerHTML="Player 1's turn x";
+                document.getElementById("health2").style.display = "flex";
+                document.getElementById("health").style.display = "none";
             }
             if (currentSwitch === 1 && currentLetter % 2 == 0) {
                player2s.style.float = "left";
@@ -4902,11 +5006,16 @@ function gameReplay() {
                CPUChat()
                scoreReset();
                if (currentLetter % 2 == 0) {
+                document.getElementById("health").style.display = "flex";
+                document.getElementById("health2").style.display = "none";
+                player2s.innerHTML="Player 1's turn";
                 player2s.style.float = "right";
                 player2s.innerHTML="Player 2's turn o";
             }else {
                 player2s.style.float = "left";
                 player2s.innerHTML="Player 1's turn x";
+                document.getElementById("health2").style.display = "flex";
+                document.getElementById("health").style.display = "none";
             }
             if (currentSwitch === 1 && currentLetter % 2 == 0) {
                player2s.style.float = "left";
@@ -5036,11 +5145,16 @@ function gameReplay() {
                CPUChat()
                scoreReset();
                if (currentLetter % 2 == 0) {
+                document.getElementById("health").style.display = "flex";
+                document.getElementById("health2").style.display = "none";
+                player2s.innerHTML="Player 1's turn";
                 player2s.style.float = "right";
                 player2s.innerHTML="Player 2's turn o";
             }else {
                 player2s.style.float = "left";
                 player2s.innerHTML="Player 1's turn x";
+                document.getElementById("health2").style.display = "flex";
+                document.getElementById("health").style.display = "none";
             }
             if (currentSwitch === 1 && currentLetter % 2 == 0) {
                player2s.style.float = "left";
@@ -5153,12 +5267,17 @@ function gameReplay() {
                gameReplay();
                CPUChat()
                scoreReset();
-               if (currentLetter % 2 == 0) {
+                if (currentLetter % 2 == 0) {
+                document.getElementById("health").style.display = "flex";
+                document.getElementById("health2").style.display = "none";
+                player2s.innerHTML="Player 1's turn";
                 player2s.style.float = "right";
                 player2s.innerHTML="Player 2's turn o";
             }else {
                 player2s.style.float = "left";
                 player2s.innerHTML="Player 1's turn x";
+                document.getElementById("health2").style.display = "flex";
+                document.getElementById("health").style.display = "none";
             }
             if (currentSwitch === 1 && currentLetter % 2 == 0) {
                player2s.style.float = "left";
