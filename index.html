@@ -4119,7 +4119,6 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
                      if (letterArray[0] === 1 & (letterArray[3] === 1) & (letterArray[6] === 1)) {
                         player1ScoreVsCPU++;
@@ -4129,7 +4128,6 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
                      if (letterArray[0] === 1 & (letterArray[4] === 1) & (letterArray[8] === 1)) {
                         player1ScoreVsCPU++;
@@ -4139,9 +4137,35 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
-
+                     
+                     if (letterArray[0] === 2 & (letterArray[1] === 2) & (letterArray[2] === 2)) {
+                        player1ScoreVsCPU++;
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
+                     if (letterArray[0] === 2 & (letterArray[3] === 2) & (letterArray[6] === 2)) {
+                        player1ScoreVsCPU++;
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
+                     if (letterArray[0] === 2 & (letterArray[4] === 2) & (letterArray[8] === 2)) {
+                        player1ScoreVsCPU++;
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
                      if (player1ScoreVsCPU >= 0 && player1ScoreVsCPU < 5 && btnclick7 == 1) {
                            easyPlayer();
                            opponent.innerHTML = "Opponent: Spongebob (Easy)";
@@ -4175,34 +4199,6 @@ function gameReplay() {
                         if (btnclick8 % 2 == 0) {
                            easyPlayer()  
                         }
-                     
-                     if (letterArray[0] === 2 & (letterArray[1] === 2) & (letterArray[2] === 2)) {
-                        player1ScoreVsCPU++;
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
-                     if (letterArray[0] === 2 & (letterArray[3] === 2) & (letterArray[6] === 2)) {
-                        player1ScoreVsCPU++;
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
-                     if (letterArray[0] === 2 & (letterArray[4] === 2) & (letterArray[8] === 2)) {
-                        player1ScoreVsCPU++;
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
                      tie();
                      btn = document.getElementById("btn");
                      btn2 = document.getElementById("btn2");
@@ -4247,7 +4243,7 @@ function gameReplay() {
                          document.getElementById("prompt").innerHTML = `${letterArray}`;
                          div2xo = 1;
                          //div2.innerHTML = `${letterArray[0]}`; 1
-                        
+                         
                      } else {
                          div2.style.pointerEvents = "none";
                          div2.innerHTML = `O`;
@@ -4264,7 +4260,6 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
                      if (letterArray[1] === 1 & (letterArray[4] === 1) & (letterArray[7] === 1)) {
                         player1ScoreVsCPU++;
@@ -4274,9 +4269,26 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
 
+                     if (letterArray[0] === 2 & (letterArray[1] === 2) & (letterArray[2] === 2)) {
+                        player1ScoreVsCPU++;
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
+                     if (letterArray[1] === 2 & (letterArray[4] === 2) & (letterArray[7] === 2)) {
+                        player1ScoreVsCPU++;
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
                      if (player1ScoreVsCPU >= 0 && player1ScoreVsCPU < 5 && btnclick7 == 1) {
                            easyPlayer();
                            opponent.innerHTML = "Opponent: Spongebob (Easy)";
@@ -4310,25 +4322,6 @@ function gameReplay() {
                         if (btnclick8 % 2 == 0) {
                            easyPlayer()  
                         }
-
-                     if (letterArray[0] === 2 & (letterArray[1] === 2) & (letterArray[2] === 2)) {
-                        player1ScoreVsCPU++;
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
-                     if (letterArray[1] === 2 & (letterArray[4] === 2) & (letterArray[7] === 2)) {
-                        player1ScoreVsCPU++;
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
                      tie();
                      btn = document.getElementById("btn");
                      btn.onclick = function() {
@@ -4366,7 +4359,7 @@ function gameReplay() {
                          document.getElementById("prompt").innerHTML = `${letterArray}`;
                          div3xo = 1;
                          //div2.innerHTML = `${letterArray[0]}`; 1
-                        
+                         
                      } else {
                          div3.style.pointerEvents = "none";
                          div3.innerHTML = `O`;
@@ -4383,7 +4376,6 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
                      if (letterArray[2] === 1 & (letterArray[5] === 1) & (letterArray[8] === 1)) {
                         player1ScoreVsCPU++;
@@ -4393,7 +4385,6 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
                      if (letterArray[2] === 1 & (letterArray[4] === 1) & (letterArray[6] === 1)) {
                         player1ScoreVsCPU++;
@@ -4403,9 +4394,35 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
 
+                     if (letterArray[0] === 2 & (letterArray[1] === 2) & (letterArray[2] === 2)) {
+                        player1ScoreVsCPU++;
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
+                     if (letterArray[2] === 2 & (letterArray[5] === 2) & (letterArray[8] === 2)) {
+                        player1ScoreVsCPU++;
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
+                     if (letterArray[2] === 2 & (letterArray[4] === 2) & (letterArray[6] === 2)) {
+                        player1ScoreVsCPU++;
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
                      if (player1ScoreVsCPU >= 0 && player1ScoreVsCPU < 5 && btnclick7 == 1) {
                            easyPlayer();
                            opponent.innerHTML = "Opponent: Spongebob (Easy)";
@@ -4439,34 +4456,6 @@ function gameReplay() {
                         if (btnclick8 % 2 == 0) {
                            easyPlayer()  
                         }
-
-                     if (letterArray[0] === 2 & (letterArray[1] === 2) & (letterArray[2] === 2)) {
-                        player1ScoreVsCPU++;
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
-                     if (letterArray[2] === 2 & (letterArray[5] === 2) & (letterArray[8] === 2)) {
-                        player1ScoreVsCPU++;
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
-                     if (letterArray[2] === 2 & (letterArray[4] === 2) & (letterArray[6] === 2)) {
-                        player1ScoreVsCPU++;
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
                      tie();
                      btn = document.getElementById("btn");
                      btn.onclick = function() {
@@ -4519,7 +4508,6 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
                      if (letterArray[0] === 1 & (letterArray[3] === 1) & (letterArray[6] === 1)) {
                         player1ScoreVsCPU++;
@@ -4529,9 +4517,26 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
 
+                     if (letterArray[3] === 2 & (letterArray[4] === 2) & (letterArray[5] === 2)) {
+                        player1ScoreVsCPU++;
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
+                     if (letterArray[0] === 2 & (letterArray[3] === 2) & (letterArray[6] === 2)) {
+                        player1ScoreVsCPU++;
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
                      if (player1ScoreVsCPU >= 0 && player1ScoreVsCPU < 5 && btnclick7 == 1) {
                            easyPlayer();
                            opponent.innerHTML = "Opponent: Spongebob (Easy)";
@@ -4565,25 +4570,6 @@ function gameReplay() {
                         if (btnclick8 % 2 == 0) {
                            easyPlayer()  
                         }
-
-                     if (letterArray[3] === 2 & (letterArray[4] === 2) & (letterArray[5] === 2)) {
-                        player1ScoreVsCPU++;
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
-                     if (letterArray[0] === 2 & (letterArray[3] === 2) & (letterArray[6] === 2)) {
-                        player1ScoreVsCPU++;
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
                      tie();
                      btn = document.getElementById("btn");
                      btn.onclick = function() {
@@ -4637,7 +4623,6 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
                      if (letterArray[1] === 1 & (letterArray[4] === 1) & (letterArray[7] === 1)) {
                         player1ScoreVsCPU++;
@@ -4647,7 +4632,6 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
                      if (letterArray[0] === 1 & (letterArray[4] === 1) & (letterArray[8] === 1)) {
                         player1ScoreVsCPU++;
@@ -4657,7 +4641,6 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
                      if (letterArray[2] === 1 & (letterArray[4] === 1) & (letterArray[6] === 1)) {
                         player1ScoreVsCPU++;
@@ -4667,42 +4650,7 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
-
-                     if (player1ScoreVsCPU >= 0 && player1ScoreVsCPU < 5 && btnclick7 == 1) {
-                           easyPlayer();
-                           opponent.innerHTML = "Opponent: Spongebob (Easy)";
-
-                        }
-                         if (player1ScoreVsCPU >= 5 && player1ScoreVsCPU < 10 && btnclick7 == 1) {
-                           cpuMTurn();
-                           opponent.innerHTML = "Opponent: Mark (Medium)";
-
-                        }
-                        if (player1ScoreVsCPU >= 10 && player1ScoreVsCPU < 15 && btnclick7 == 1) {
-                           cpuTurn();
-                           opponent.innerHTML = "Opponent: Airialle (Hard)";
-                        }
-                        if (player1ScoreVsCPU == 15 && btnclick7 == 1) {
-                           document.getElementById("win").innerHTML = "Congratulations! Game finished.";
-                           var myTimeout = setTimeout( function () {
-                              player1ScoreVsCPU = 0;
-                              resetter();
-                           }) 
-                        }
-                         if (btnclick2 % 2 == 0) {
-                           cpuTurn()  
-                        }
-                        if (btnclick3 % 2 == 0) {
-                           cpuMTurn()  
-                        }
-                        // if (btnclick7 == 1) {
-                        //    easyPlayer()  
-                        // }
-                        if (btnclick8 % 2 == 0) {
-                           easyPlayer()  
-                        }
 
                      if (letterArray[3] === 2 & (letterArray[4] === 2) & (letterArray[5] === 2)) {
                         player1ScoreVsCPU++;
@@ -4740,6 +4688,39 @@ function gameReplay() {
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
                      }
+                     if (player1ScoreVsCPU >= 0 && player1ScoreVsCPU < 5 && btnclick7 == 1) {
+                           easyPlayer();
+                           opponent.innerHTML = "Opponent: Spongebob (Easy)";
+
+                        }
+                         if (player1ScoreVsCPU >= 5 && player1ScoreVsCPU < 10 && btnclick7 == 1) {
+                           cpuMTurn();
+                           opponent.innerHTML = "Opponent: Mark (Medium)";
+
+                        }
+                        if (player1ScoreVsCPU >= 10 && player1ScoreVsCPU < 15 && btnclick7 == 1) {
+                           cpuTurn();
+                           opponent.innerHTML = "Opponent: Airialle (Hard)";
+                        }
+                        if (player1ScoreVsCPU == 15 && btnclick7 == 1) {
+                           document.getElementById("win").innerHTML = "Congratulations! Game finished.";
+                           var myTimeout = setTimeout( function () {
+                              player1ScoreVsCPU = 0;
+                              resetter();
+                           }) 
+                        }
+                         if (btnclick2 % 2 == 0) {
+                           cpuTurn()  
+                        }
+                        if (btnclick3 % 2 == 0) {
+                           cpuMTurn()  
+                        }
+                        // if (btnclick7 == 1) {
+                        //    easyPlayer()  
+                        // }
+                        if (btnclick8 % 2 == 0) {
+                           easyPlayer()  
+                        }
                      tie();
                      btn = document.getElementById("btn");
                      btn.onclick = function() {
@@ -4794,7 +4775,6 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
                      if (letterArray[2] === 1 & (letterArray[5] === 1) & (letterArray[8] === 1)) {
                         player1ScoreVsCPU++;
@@ -4804,9 +4784,26 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
 
+                     if (letterArray[3] === 2 & (letterArray[4] === 2) & (letterArray[5] === 2)) {
+                        player1ScoreVsCPU++;
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
+                     if (letterArray[2] === 2 & (letterArray[5] === 2) & (letterArray[8] === 2)) {
+                        player1ScoreVsCPU++;
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
                      if (player1ScoreVsCPU >= 0 && player1ScoreVsCPU < 5 && btnclick7 == 1) {
                            easyPlayer();
                            opponent.innerHTML = "Opponent: Spongebob (Easy)";
@@ -4840,25 +4837,6 @@ function gameReplay() {
                         if (btnclick8 % 2 == 0) {
                            easyPlayer()  
                         }
-
-                     if (letterArray[3] === 2 & (letterArray[4] === 2) & (letterArray[5] === 2)) {
-                        player1ScoreVsCPU++;
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
-                     if (letterArray[2] === 2 & (letterArray[5] === 2) & (letterArray[8] === 2)) {
-                        player1ScoreVsCPU++;
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
                      tie();
                      btn = document.getElementById("btn");
                      btn.onclick = function() {
@@ -4914,7 +4892,6 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
                      if (letterArray[0] === 1 & (letterArray[3] === 1) & (letterArray[6] === 1)) {
                         player1ScoreVsCPU++;
@@ -4924,7 +4901,6 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
                      if (letterArray[2] === 1 & (letterArray[4] === 1) & (letterArray[6] === 1)) {
                         player1ScoreVsCPU++;
@@ -4934,9 +4910,32 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
 
+                     if (letterArray[6] === 2 & (letterArray[7] === 2) & (letterArray[8] === 2)) {
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
+                     if (letterArray[0] === 2 & (letterArray[3] === 2) & (letterArray[6] === 2)) {
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
+                     if (letterArray[2] === 2 & (letterArray[4] === 2) & (letterArray[6] === 2)) {
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
                      if (player1ScoreVsCPU >= 0 && player1ScoreVsCPU < 5 && btnclick7 == 1) {
                            easyPlayer();
                            opponent.innerHTML = "Opponent: Spongebob (Easy)";
@@ -4970,31 +4969,6 @@ function gameReplay() {
                         if (btnclick8 % 2 == 0) {
                            easyPlayer()  
                         }
-
-                     if (letterArray[6] === 2 & (letterArray[7] === 2) & (letterArray[8] === 2)) {
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
-                     if (letterArray[0] === 2 & (letterArray[3] === 2) & (letterArray[6] === 2)) {
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
-                     if (letterArray[2] === 2 & (letterArray[4] === 2) & (letterArray[6] === 2)) {
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
                      tie();
                      btn = document.getElementById("btn");
                      btn.onclick = function() {
@@ -5049,7 +5023,6 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
                      if (letterArray[1] === 1 & (letterArray[4] === 1) & (letterArray[7] === 1)) {
                         player1ScoreVsCPU++;
@@ -5059,9 +5032,24 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
 
+                     if (letterArray[6] === 2 & (letterArray[7] === 2) & (letterArray[8] === 2)) {
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
+                     if (letterArray[1] === 2 & (letterArray[4] === 2) & (letterArray[7] === 2)) {
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
                      if (player1ScoreVsCPU >= 0 && player1ScoreVsCPU < 5 && btnclick7 == 1) {
                            easyPlayer();
                            opponent.innerHTML = "Opponent: Spongebob (Easy)";
@@ -5095,29 +5083,13 @@ function gameReplay() {
                         if (btnclick8 % 2 == 0) {
                            easyPlayer()  
                         }
-
-                     if (letterArray[6] === 2 & (letterArray[7] === 2) & (letterArray[8] === 2)) {
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
-                     if (letterArray[1] === 2 & (letterArray[4] === 2) & (letterArray[7] === 2)) {
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
+                     tie();
                      btn = document.getElementById("btn");
                      btn.onclick = function() {
                         melter();
                         letterArray.splice(0,9,0,0,0,0,0,0,0,0,0)
                         document.getElementById("winner").innerHTML = "";
-
+               
                 }
 
             })
@@ -5168,7 +5140,6 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
                      if (letterArray[2] === 1 & (letterArray[5] === 1) & (letterArray[8] === 1)) {
                         player1ScoreVsCPU++;
@@ -5178,7 +5149,6 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
                      if (letterArray[0] === 1 & (letterArray[4] === 1) & (letterArray[8] === 1)) {
                         player1ScoreVsCPU++;
@@ -5188,9 +5158,32 @@ function gameReplay() {
                         freezer();
                         document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
-                        return;
                      }
 
+                     if (letterArray[6] === 2 & (letterArray[7] === 2) & (letterArray[8] === 2)) {
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
+                     if (letterArray[2] === 2 & (letterArray[5] === 2) & (letterArray[8] === 2)) {
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
+                     if (letterArray[0] === 2 & (letterArray[4] === 2) & (letterArray[8] === 2)) {
+                        player2Score++;
+                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                        winner.innerHTML = "O Wins";
+                        freezer();
+                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                        var myTimeout = setTimeout(function () {resetter()}, 5000);
+                     }
                      if (player1ScoreVsCPU >= 0 && player1ScoreVsCPU < 5 && btnclick7 == 1) {
                            easyPlayer();
                            opponent.innerHTML = "Opponent: Spongebob (Easy)";
@@ -5224,31 +5217,6 @@ function gameReplay() {
                         if (btnclick8 % 2 == 0) {
                            easyPlayer()  
                         }
-
-                     if (letterArray[6] === 2 & (letterArray[7] === 2) & (letterArray[8] === 2)) {
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
-                     if (letterArray[2] === 2 & (letterArray[5] === 2) & (letterArray[8] === 2)) {
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
-                     if (letterArray[0] === 2 & (letterArray[4] === 2) & (letterArray[8] === 2)) {
-                        player2Score++;
-                        player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
-                        winner.innerHTML = "O Wins";
-                        freezer();
-                        document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
-                        var myTimeout = setTimeout(function () {resetter()}, 5000);
-                     }
                      tie();
                      btn = document.getElementById("btn");
                      btn.onclick = function() {
