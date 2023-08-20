@@ -910,7 +910,7 @@ var myTimeout = setTimeout( function() {
 
 
 
-
+var winCheck = 0;
 
 
 function easyPlayer() {
@@ -949,7 +949,7 @@ function easyPlayer() {
       var myTimeout = setTimeout(function () {resetter()}, 5000);
       letterArray.splice(8,1,2);
       return;
-   } if (letterArray[1] === 2 && letterArray[4] === 2 && letterArray[7] === 0) {
+   } if (letterArray[1] === 2 && letterArray[4] === 2 && letterArray[7] === 0 && winCheck === 0) {
       div8.innerHTML = "O"
                     div8.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -960,7 +960,7 @@ function easyPlayer() {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(7,1,2);
                     return;
-   }if (letterArray[0] === 0 && letterArray[1] === 2 && letterArray[2] === 2) {
+   }if (letterArray[0] === 0 && letterArray[1] === 2 && letterArray[2] === 2 && winCheck === 0) {
       div1.innerHTML = "O"
                     div3.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -971,7 +971,7 @@ function easyPlayer() {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(0,1,2);
                     return;
-   } if (letterArray[2] === 2 && letterArray[5] === 2 && letterArray[8] === 0) {
+   } if (letterArray[2] === 2 && letterArray[5] === 2 && letterArray[8] === 0 && winCheck === 0) {
       div9.innerHTML = "O"
                     div9.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -982,7 +982,7 @@ function easyPlayer() {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(8,1,2);
                     return;
-   } if (letterArray[0] === 0 && letterArray[3] === 2 && letterArray[6] === 2) {
+   } if (letterArray[0] === 0 && letterArray[3] === 2 && letterArray[6] === 2 && winCheck === 0) {
       div1.innerHTML = "O"
                     div1.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -993,7 +993,7 @@ function easyPlayer() {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(0,1,2);
                     return;
-   } if (letterArray[6] === 2 && letterArray[4] === 2 && letterArray[2] === 0) {
+   } if (letterArray[6] === 2 && letterArray[4] === 2 && letterArray[2] === 0 && winCheck === 0) {
       div3.innerHTML = "O"
                     div3.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -1004,7 +1004,7 @@ function easyPlayer() {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(2,1,2);
                     return;
-   }if (letterArray[6] === 2 && letterArray[7] === 2 && letterArray[8] === 0) {
+   }if (letterArray[6] === 2 && letterArray[7] === 2 && letterArray[8] === 0 && winCheck === 0) {
       div9.innerHTML = "O"
                     div9.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -1031,7 +1031,7 @@ function easyPlayer() {
 
 
 
-   }if (letterArray[3] === 2 && letterArray[4] === 2 && letterArray[5] === 0) {
+   }if (letterArray[3] === 2 && letterArray[4] === 2 && letterArray[5] === 0 && winCheck === 0) {
       div6.innerHTML = "O"
                     div6.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -1042,7 +1042,7 @@ function easyPlayer() {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(5,1,2);
                     return;
-   }if (letterArray[3] === 0 && letterArray[4] === 2 && letterArray[5] === 2) {
+   }if (letterArray[3] === 0 && letterArray[4] === 2 && letterArray[5] === 2 && winCheck === 0) {
       div4.innerHTML = "O"
                     div4.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -1053,7 +1053,7 @@ function easyPlayer() {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(3,1,2);
                     return;
-   }if (letterArray[6] == 0 && letterArray[7] === 2 && letterArray[8] === 2) {
+   }if (letterArray[6] == 0 && letterArray[7] === 2 && letterArray[8] === 2 && winCheck === 0) {
       div7.innerHTML = "O"
                     div7.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -1064,7 +1064,7 @@ function easyPlayer() {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(6,1,2);
                     return;
-   } if (letterArray[8] === 2 && letterArray[4] === 2 && letterArray[0] === 0) {
+   } if (letterArray[8] === 2 && letterArray[4] === 2 && letterArray[0] === 0 && winCheck === 0) {
       div1.innerHTML = "O"
                     div1.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -1075,7 +1075,7 @@ function easyPlayer() {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(0,1,2);
                     return;
-   }if (letterArray[8] === 2 && letterArray[5] === 2 && letterArray[2] === 0) {
+   }if (letterArray[8] === 2 && letterArray[5] === 2 && letterArray[2] === 0 && winCheck === 0) {
       div3.innerHTML = "O"
                     div3.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -1086,7 +1086,7 @@ function easyPlayer() {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(2,1,2);
                     return;
-   }  if (letterArray[0] === 2 && letterArray[1] === 0 && letterArray[2] === 2) {
+   }  if (letterArray[0] === 2 && letterArray[1] === 0 && letterArray[2] === 2 && winCheck === 0) {
       div2.innerHTML = "O"
                     div2.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -1097,7 +1097,7 @@ function easyPlayer() {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(1,1,2);
                     return;
-   } if (letterArray[0] === 2 && letterArray[3] === 0 && letterArray[6] === 2) {
+   } if (letterArray[0] === 2 && letterArray[3] === 0 && letterArray[6] === 2 && winCheck === 0) {
       div4.innerHTML = "O"
                     div4.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -1108,7 +1108,7 @@ function easyPlayer() {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(3,1,2);
                     return;
-   } if (letterArray[6] === 2 && letterArray[7] === 0 && letterArray[8] === 2) {
+   } if (letterArray[6] === 2 && letterArray[7] === 0 && letterArray[8] === 2 && winCheck === 0) {
       div8.innerHTML = "O"
                     div8.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -1119,7 +1119,7 @@ function easyPlayer() {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(7,1,2);
                     return;
-   } if (letterArray[8] === 2 && letterArray[5] === 0 && letterArray[2] === 2) {
+   } if (letterArray[8] === 2 && letterArray[5] === 0 && letterArray[2] === 2 && winCheck === 0) {
       div6.innerHTML = "O"
                     div6.style.pointerEvents = "none";
                     winner.innerHTML = "O Wins";
@@ -1130,7 +1130,7 @@ function easyPlayer() {
                     var myTimeout = setTimeout(function () {resetter()}, 5000);
                     letterArray.splice(5,1,2);
                     return;
-   } if (letterArray[6] === 2 && letterArray[4] === 0 && letterArray[2] === 2) {
+   } if (letterArray[6] === 2 && letterArray[4] === 0 && letterArray[2] === 2 && winCheck === 0) {
       div5.innerHTML = "O"
                   div5.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
@@ -1147,7 +1147,7 @@ function easyPlayer() {
 
 
 
-   } if (letterArray[6] == 0 && letterArray[4] === 2 && letterArray[2] === 2) {
+   } if (letterArray[6] == 0 && letterArray[4] === 2 && letterArray[2] === 2 && winCheck === 0) {
       div6.innerHTML = "O"
                   div6.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
@@ -1158,7 +1158,7 @@ function easyPlayer() {
                   var myTimeout = setTimeout(function () {resetter()}, 5000);
                   letterArray.splice(6,1,2);
                   return;
-   } if (letterArray[0] === 2 && letterArray[4] === 0 && letterArray[8] === 2) {
+   } if (letterArray[0] === 2 && letterArray[4] === 0 && letterArray[8] === 2 && winCheck === 0) {
       div5.innerHTML = "O"
                   div5.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
@@ -1169,7 +1169,7 @@ function easyPlayer() {
                   var myTimeout = setTimeout(function () {resetter()}, 5000);
                   letterArray.splice(4,1,2);
                   return;
-   } if (letterArray[0] === 0 && letterArray[4] === 2 && letterArray[8] === 2) {
+   } if (letterArray[0] === 0 && letterArray[4] === 2 && letterArray[8] === 2 && winCheck === 0) {
       div1.innerHTML = "O"
                   div1.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
@@ -1180,7 +1180,7 @@ function easyPlayer() {
                   var myTimeout = setTimeout(function () {resetter()}, 5000);
                   letterArray.splice(0,1,2);
                   return;
-   } if (letterArray[1] === 0 && letterArray[4] === 2 && letterArray[7] === 2) {
+   } if (letterArray[1] === 0 && letterArray[4] === 2 && letterArray[7] === 2 && winCheck === 0) {
       div2.innerHTML = "O"
                   div2.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
@@ -1191,7 +1191,7 @@ function easyPlayer() {
                   var myTimeout = setTimeout(function () {resetter()}, 5000);
                   letterArray.splice(1,1,2);
                   return;
-   }if ( letterArray[1] === 2 && letterArray[4] === 0 && letterArray[7] === 2) {
+   }if ( letterArray[1] === 2 && letterArray[4] === 0 && letterArray[7] === 2 && winCheck === 0) {
       div5.innerHTML = "O"
                   div5.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
@@ -1203,6 +1203,7 @@ function easyPlayer() {
                   letterArray.splice(4,1,2);
                   return;
    }
+   winCheck = 0;
    if (letterArray[0] == 0 && easy == 1) {
       div1.innerHTML = "O"
       div1.style.pointerEvents = "none";
@@ -4113,6 +4114,7 @@ function gameReplay() {
                          //div2.innerHTML = `${letterArray[0]}`; 2
                      }
                      if (letterArray[0] === 1 & (letterArray[1] === 1) & (letterArray[2] === 1)) {
+                        winCheck = 1;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
                         winner.innerHTML = "X Wins";
@@ -4121,6 +4123,7 @@ function gameReplay() {
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
                      }
                      if (letterArray[0] === 1 & (letterArray[3] === 1) & (letterArray[6] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -4130,6 +4133,7 @@ function gameReplay() {
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
                      }
                      if (letterArray[0] === 1 & (letterArray[4] === 1) & (letterArray[8] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -4253,6 +4257,7 @@ function gameReplay() {
                          //div2.innerHTML = `${letterArray[0]}`; 2
                      }
                      if (letterArray[0] === 1 & (letterArray[1] === 1) & (letterArray[2] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -4262,6 +4267,7 @@ function gameReplay() {
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
                      }
                      if (letterArray[1] === 1 & (letterArray[4] === 1) & (letterArray[7] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -4369,6 +4375,7 @@ function gameReplay() {
                          //div2.innerHTML = `${letterArray[0]}`; 2
                      }
                      if (letterArray[0] === 1 & (letterArray[1] === 1) & (letterArray[2] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -4378,6 +4385,7 @@ function gameReplay() {
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
                      }
                      if (letterArray[2] === 1 & (letterArray[5] === 1) & (letterArray[8] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -4387,6 +4395,7 @@ function gameReplay() {
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
                      }
                      if (letterArray[2] === 1 & (letterArray[4] === 1) & (letterArray[6] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -4501,6 +4510,7 @@ function gameReplay() {
                          //div2.innerHTML = `${letterArray[0]}`; 2
                      }
                      if (letterArray[3] === 1 & (letterArray[4] === 1) & (letterArray[5] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -4510,6 +4520,7 @@ function gameReplay() {
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
                      }
                      if (letterArray[0] === 1 & (letterArray[3] === 1) & (letterArray[6] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -4616,6 +4627,7 @@ function gameReplay() {
                          //div2.innerHTML = `${letterArray[0]}`; 2
                      }
                      if (letterArray[3] === 1 & (letterArray[4] === 1) & (letterArray[5] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -4625,6 +4637,7 @@ function gameReplay() {
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
                      }
                      if (letterArray[1] === 1 & (letterArray[4] === 1) & (letterArray[7] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -4634,6 +4647,7 @@ function gameReplay() {
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
                      }
                      if (letterArray[0] === 1 & (letterArray[4] === 1) & (letterArray[8] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -4643,6 +4657,7 @@ function gameReplay() {
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
                      }
                      if (letterArray[2] === 1 & (letterArray[4] === 1) & (letterArray[6] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -4768,6 +4783,7 @@ function gameReplay() {
                          //div2.innerHTML = `${letterArray[0]}`; 2
                      }
                      if (letterArray[3] === 1 & (letterArray[4] === 1) & (letterArray[5] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -4777,6 +4793,7 @@ function gameReplay() {
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
                      }
                      if (letterArray[2] === 1 & (letterArray[5] === 1) & (letterArray[8] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -4885,6 +4902,7 @@ function gameReplay() {
                          //div2.innerHTML = `${letterArray[0]}`; 2
                      }
                      if (letterArray[6] === 1 & (letterArray[7] === 1) & (letterArray[8] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -4894,6 +4912,7 @@ function gameReplay() {
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
                      }
                      if (letterArray[0] === 1 & (letterArray[3] === 1) & (letterArray[6] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -4903,6 +4922,7 @@ function gameReplay() {
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
                      }
                      if (letterArray[2] === 1 & (letterArray[4] === 1) & (letterArray[6] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -5016,6 +5036,7 @@ function gameReplay() {
                          //div2.innerHTML = `${letterArray[0]}`; 2
                      }
                      if (letterArray[6] === 1 & (letterArray[7] === 1) & (letterArray[8] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -5025,6 +5046,7 @@ function gameReplay() {
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
                      }
                      if (letterArray[1] === 1 & (letterArray[4] === 1) & (letterArray[7] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -5133,6 +5155,7 @@ function gameReplay() {
                          //div2.innerHTML = `${letterArray[0]}`; 2
                      }
                      if (letterArray[6] === 1 & (letterArray[7] === 1) & (letterArray[8] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -5142,6 +5165,7 @@ function gameReplay() {
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
                      }
                      if (letterArray[2] === 1 & (letterArray[5] === 1) & (letterArray[8] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
@@ -5151,6 +5175,7 @@ function gameReplay() {
                         var myTimeout = setTimeout(function () {resetter()}, 5000);
                      }
                      if (letterArray[0] === 1 & (letterArray[4] === 1) & (letterArray[8] === 1)) {
+                        winCheck = 1;
                         player1ScoreVsCPU++;
                         player1Score++;
                         player1score.innerHTML= `Player 1's score: <br> ${player1Score}`;
