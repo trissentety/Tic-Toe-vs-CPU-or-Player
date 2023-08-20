@@ -273,14 +273,15 @@
                document.getElementById("health15").style.backgroundColor = "black";
             } 
             CPUChat();
-            document.getElementById("prompt").innerHTML = `${letterArray}`;
                         document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
                         letterArray.splice(0,9,0,0,0,0,0,0,0,0,0)
                         letterArray2.splice(0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
                         document.getElementById("winner").innerHTML = "";
                         document.getElementById("footy").innerHTML = "";
+                        document.getElementById("prompt").innerHTML = "";
+                        document.getElementById("prompt").innerHTML = `${letterArray}`
                         melter();
-                        document.getelementById("prompt").innerHTML = `${letterArray}`;
+         
                     
                      
                         gameMoves = 0;
