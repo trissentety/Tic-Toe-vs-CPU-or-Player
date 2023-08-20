@@ -985,12 +985,13 @@ function CPUChat() {
                            }, 10000)
 
                         }
-                        if (player1ScoreVsCPU == 15) {
-                           document.getElementById("CPUSays").innerHTML = 'Airialle says "Whateverrrrrrrrr gg."'
-                           var myTimeout = setTimeout(function () {
-                              document.getElementById("CPUSays").innerHTML = ""
-                           }, 10000)
-
+                        if (player1ScoreVsCPU == 15 && btnclick7 == 1) {
+                           document.getElementById("win").innerHTML = 'Airialle says "Whateverrrrrrrrr gg."';
+                           var myTimeout = setTimeout( function () {
+                              player1ScoreVsCPU = 0;
+                              document.getElementById("win").innerHTML = 'Congratulations! Game finished.';
+                              resetter();
+                           }, 10000) 
                         }
             }
 
@@ -3433,6 +3434,63 @@ function easyPlayer() {
                   break;
                }
 
+               // if (slot = 1 & letterArray[1] === 1 && letterArray[5] === 1 && letterArray[7] === 0) {
+               //    div5.innerHTML = "O"
+               //    div5.style.pointerEvents = "none";
+               //    letterArray.splice(7,1,2);
+               //    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+               //    break;
+               // }
+               // if (slot = 1 & letterArray[1] === 1 && letterArray[5] === 1 && letterArray[3] === 0) {
+               //    div5.innerHTML = "O"
+               //    div5.style.pointerEvents = "none";
+               //    letterArray.splice(3,1,2);
+               //    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+               //    break;
+               // }
+               // if (slot = 1 & letterArray[1] === 1 && letterArray[3] === 1 && letterArray[5] === 0) {
+               //    div5.innerHTML = "O"
+               //    div5.style.pointerEvents = "none";
+               //    letterArray.splice(5,1,2);
+               //    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+               //    break;
+               // }c
+               // if (slot = 1 & letterArray[1] === 1 && letterArray[3] === 1 && letterArray[7] === 0) {
+               //    div5.innerHTML = "O"
+               //    div5.style.pointerEvents = "none";
+               //    letterArray.splice(7,1,2);
+               //    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+               //    break;
+               // }
+               // if (slot = 1 & letterArray[3] === 1 && letterArray[7] === 0 && letterArray[1] === 0) {
+               //    div5.innerHTML = "O"
+               //    div5.style.pointerEvents = "none";
+               //    letterArray.splice(1,1,2);
+               //    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+               //    break;
+               // }
+               // if (slot = 1 & letterArray[3] === 1 && letterArray[7] === 0 && letterArray[5] === 0) {
+               //    div5.innerHTML = "O"
+               //    div5.style.pointerEvents = "none";
+               //    letterArray.splice(5,1,2);
+               //    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+               //    break;
+               // }
+               // if (slot = 1 & letterArray[5] === 1 && letterArray[7] === q && letterArray[4] === 0) {
+               //    div5.innerHTML = "O"
+               //    div5.style.pointerEvents = "none";
+               //    letterArray.splice(4,1,2);
+               //    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+               //    break;
+               // }
+               // if (slot = 1 & letterArray[5] === 1 && letterArray[7] === 0 && letterArray[4] === 0) {
+               //    div5.innerHTML = "O"
+               //    div5.style.pointerEvents = "none";
+               //    letterArray.splice(4,1,2);
+               //    document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
+               //    break;
+               // }
+
 
 
 
@@ -4349,11 +4407,12 @@ function gameReplay() {
                            opponent.innerHTML = "Opponent: Airialle (Hard)";
                         }
                         if (player1ScoreVsCPU == 15 && btnclick7 == 1) {
-                           document.getElementById("win").innerHTML = "Congratulations! Game finished.";
+                           document.getElementById("win").innerHTML = 'Airialle says "Whateverrrrrrrrr gg." Congratulations! Game finished.';
                            var myTimeout = setTimeout( function () {
                               player1ScoreVsCPU = 0;
+                              document.getElementById("win").innerHTML = 'Congratulations! Game finished.';
                               resetter();
-                           }) 
+                           }, 10000) 
                         }
                         if (btnclick2 % 2 == 0) {
                            cpuTurn()  
@@ -4479,11 +4538,12 @@ function gameReplay() {
                            opponent.innerHTML = "Opponent: Airialle (Hard)";
                         }
                         if (player1ScoreVsCPU == 15 && btnclick7 == 1) {
-                           document.getElementById("win").innerHTML = "Congratulations! Game finished.";
+                           document.getElementById("win").innerHTML = 'Airialle says "Whateverrrrrrrrr gg."';
                            var myTimeout = setTimeout( function () {
                               player1ScoreVsCPU = 0;
+                              document.getElementById("win").innerHTML = 'Congratulations! Game finished.';
                               resetter();
-                           }) 
+                           }, 10000) 
                         }
                          if (btnclick2 % 2 == 0) {
                            cpuTurn()  
@@ -4621,11 +4681,12 @@ function gameReplay() {
                            opponent.innerHTML = "Opponent: Airialle (Hard)";
                         }
                         if (player1ScoreVsCPU == 15 && btnclick7 == 1) {
-                           document.getElementById("win").innerHTML = "Congratulations! Game finished.";
+                           document.getElementById("win").innerHTML = 'Airialle says "Whateverrrrrrrrr gg."';
                            var myTimeout = setTimeout( function () {
                               player1ScoreVsCPU = 0;
+                              document.getElementById("win").innerHTML = 'Congratulations! Game finished.';
                               resetter();
-                           }) 
+                           }, 10000) 
                         }
                          if (btnclick2 % 2 == 0) {
                            cpuTurn()  
@@ -4742,11 +4803,12 @@ function gameReplay() {
                            opponent.innerHTML = "Opponent: Airialle (Hard)";
                         }
                         if (player1ScoreVsCPU == 15 && btnclick7 == 1) {
-                           document.getElementById("win").innerHTML = "Congratulations! Game finished.";
+                           document.getElementById("win").innerHTML = 'Airialle says "Whateverrrrrrrrr gg."';
                            var myTimeout = setTimeout( function () {
                               player1ScoreVsCPU = 0;
+                              document.getElementById("win").innerHTML = 'Congratulations! Game finished.';
                               resetter();
-                           }) 
+                           }, 10000) 
                         }
                          if (btnclick2 % 2 == 0) {
                            cpuTurn()  
@@ -4902,11 +4964,12 @@ function gameReplay() {
                            opponent.innerHTML = "Opponent: Airialle (Hard)";
                         }
                         if (player1ScoreVsCPU == 15 && btnclick7 == 1) {
-                           document.getElementById("win").innerHTML = "Congratulations! Game finished.";
+                           document.getElementById("win").innerHTML = 'Airialle says "Whateverrrrrrrrr gg."';
                            var myTimeout = setTimeout( function () {
                               player1ScoreVsCPU = 0;
+                              document.getElementById("win").innerHTML = 'Congratulations! Game finished.';
                               resetter();
-                           }) 
+                           }, 10000) 
                         }
                          if (btnclick2 % 2 == 0) {
                            cpuTurn()  
@@ -5025,11 +5088,12 @@ function gameReplay() {
                            opponent.innerHTML = "Opponent: Airialle (Hard)";
                         }
                         if (player1ScoreVsCPU == 15 && btnclick7 == 1) {
-                           document.getElementById("win").innerHTML = "Congratulations! Game finished.";
+                           document.getElementById("win").innerHTML = 'Airialle says "Whateverrrrrrrrr gg."';
                            var myTimeout = setTimeout( function () {
                               player1ScoreVsCPU = 0;
+                              document.getElementById("win").innerHTML = 'Congratulations! Game finished.';
                               resetter();
-                           }) 
+                           }, 10000) 
                         }
                          if (btnclick2 % 2 == 0) {
                            cpuTurn()  
@@ -5165,11 +5229,12 @@ function gameReplay() {
                            opponent.innerHTML = "Opponent: Airialle (Hard)";
                         }
                         if (player1ScoreVsCPU == 15 && btnclick7 == 1) {
-                           document.getElementById("win").innerHTML = "Congratulations! Game finished.";
+                           document.getElementById("win").innerHTML = 'Airialle says "Whateverrrrrrrrr gg."';
                            var myTimeout = setTimeout( function () {
                               player1ScoreVsCPU = 0;
+                              document.getElementById("win").innerHTML = 'Congratulations! Game finished.';
                               resetter();
-                           }) 
+                           }, 10000) 
                         }
                          if (btnclick2 % 2 == 0) {
                            cpuTurn()  
@@ -5286,11 +5351,12 @@ function gameReplay() {
                            opponent.innerHTML = "Opponent: Airialle (Hard)";
                         }
                         if (player1ScoreVsCPU == 15 && btnclick7 == 1) {
-                           document.getElementById("win").innerHTML = "Congratulations! Game finished.";
+                           document.getElementById("win").innerHTML = 'Airialle says "Whateverrrrrrrrr gg."';
                            var myTimeout = setTimeout( function () {
                               player1ScoreVsCPU = 0;
+                              document.getElementById("win").innerHTML = 'Congratulations! Game finished.';
                               resetter();
-                           }) 
+                           }, 10000) 
                         }
                          if (btnclick2 % 2 == 0) {
                            cpuTurn()  
@@ -5428,11 +5494,12 @@ function gameReplay() {
                            opponent.innerHTML = "Opponent: Airialle (Hard)";
                         }
                         if (player1ScoreVsCPU == 15 && btnclick7 == 1) {
-                           document.getElementById("win").innerHTML = "Congratulations! Game finished.";
+                           document.getElementById("win").innerHTML = 'Airialle says "Whateverrrrrrrrr gg."';
                            var myTimeout = setTimeout( function () {
                               player1ScoreVsCPU = 0;
+                              document.getElementById("win").innerHTML = 'Congratulations! Game finished.';
                               resetter();
-                           }) 
+                           }, 10000) 
                         }
                          if (btnclick2 % 2 == 0) {
                            cpuTurn()  
