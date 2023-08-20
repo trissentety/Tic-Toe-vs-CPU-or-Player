@@ -273,42 +273,15 @@
                document.getElementById("health15").style.backgroundColor = "black";
             } 
             CPUChat();
-            if (player2Score === 5 & btnclick7 == 1) {
-                  player1ScoreVsCPU = 0;
-                  document.getElementById("winner").innerHTML = 'Game Over!'
-                  var myTimeout = setTimeout(function () {
-                     document.getElementById("winner").innerHTML = "";
-                  }, 10000)
-
-               }
-               if (player2Score === 5) {
-                  player2Score = 0;
-                  player2score.innerHTML = `Player 1's Score: <br> ${player2Score}`;
-                  player1Score = 0;
-                  player1score.innerHTML = `Player 2's Score: <br> ${player1Score}`;
-                  var myTimeout = setTimeout( function () {
-                     document.getElementById("newDiv").innerHTML = "";
-                  }, 3000)
-               }
-               if (player1Score === 5) {
-                  player1Score = 0;
-                  player1score.innerHTML = `Player 1's Score: <br> ${player1Score}`;
-                  player2Score = 0;
-                  player2score.innerHTML = `Player 2's Score: <br> ${player2Score}`;
-                  document.getElementById("newDiv").innerHTML = "First to 5 points wins.";
-                  var myTimeout = setTimeout( function () {
-                     document.getElementById("newDiv").innerHTML = "";
-                  }, 3000)
-               }
             
                         document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
                         letterArray.splice(0,9,0,0,0,0,0,0,0,0,0)
                         letterArray2.splice(0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+                        document.getElementById("winner").innerHTML = "";
                         document.getElementById("footy").innerHTML = "";
                         document.getElementById("prompt").innerHTML = "";
                         document.getElementById("prompt").innerHTML = `${letterArray}`
                         melter();
-         
                     
                      
                         gameMoves = 0;
@@ -3834,6 +3807,17 @@ function cpuMTurn () {
                     letterArray.splice(5,1,2);
                     return;
    } if (letterArray[6] === 2 && letterArray[4] === 0 && letterArray[2] === 2 && winCheck === 0) {
+      div5.innerHTML = "O"
+                  div5.style.pointerEvents = "none";
+                  winner.innerHTML = "O Wins";
+                  document.getElementById("footy").innerHTML = "Note: Game auto restarts 5 seconds after winning.";
+                  freezer();
+                  player2Score++;
+                  player2score.innerHTML= `Player 2's score: <br> ${player2Score}`;
+                  var myTimeout = setTimeout(function () {resetter()}, 5000);
+                  letterArray.splice(4,1,2);
+                  return;
+   } if (letterArray[3] === 2 && letterArray[4] === 0 && letterArray[5] === 2 && winCheck === 0) {
       div5.innerHTML = "O"
                   div5.style.pointerEvents = "none";
                   winner.innerHTML = "O Wins";
