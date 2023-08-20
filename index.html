@@ -272,12 +272,15 @@
             if(player2Score === 5) {
                document.getElementById("health15").style.backgroundColor = "black";
             } 
+            CPUChat();
+            document.getElementById("prompt").innerHTML = `${letterArray}`;
                         document.getElementById("scoreString").innerHTML += `${letterArray} \n`;
                         letterArray.splice(0,9,0,0,0,0,0,0,0,0,0)
                         letterArray2.splice(0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
                         document.getElementById("winner").innerHTML = "";
                         document.getElementById("footy").innerHTML = "";
                         melter();
+                        document.getelementById("prompt").innerHTML = `${letterArray}`;
                     
                      
                         gameMoves = 0;
@@ -963,6 +966,32 @@ var myTimeout = setTimeout( function() {
          
    }
 }
+
+
+
+
+function CPUChat() {
+               if (player1ScoreVsCPU == 5) {
+                           document.getElementById("CPUSays").innerHTML = 'Spongebob says "Oh Tarter Sauce!"'
+                           var myTimeout = setTimeout(function () {
+                              document.getElementById("CPUSays").innerHTML = ""
+                           }, 10000)
+                        }
+                        if (player1ScoreVsCPU == 10) {
+                           document.getElementById("CPUSays").innerHTML = 'Mark says "Today isn\'t my day."'
+                           var myTimeout = setTimeout(function () {
+                              document.getElementById("CPUSays").innerHTML = ""
+                           }, 10000)
+
+                        }
+                        if (player1ScoreVsCPU == 15) {
+                           document.getElementById("CPUSays").innerHTML = 'Airialle says "Whateverrrrrrrrr gg."'
+                           var myTimeout = setTimeout(function () {
+                              document.getElementById("CPUSays").innerHTML = ""
+                           }, 10000)
+
+                        }
+            }
 
 
 
@@ -4178,28 +4207,7 @@ function gameReplay() {
 
 
 
-            function CPUChat() {
-               if (player1ScoreVsCPU == 5) {
-                           document.getElementById("CPUSays").innerHTML = 'Spongebob says "Oh Tarter Sauce!"'
-                           var myTimeout = setTimeout(function () {
-                              document.getElementById("CPUSays").innerHTML = ""
-                           }, 10000)
-                        }
-                        if (player1ScoreVsCPU == 10) {
-                           document.getElementById("CPUSays").innerHTML = 'Mark says "Today isn\'t my day."'
-                           var myTimeout = setTimeout(function () {
-                              document.getElementById("CPUSays").innerHTML = ""
-                           }, 10000)
-
-                        }
-                        if (player1ScoreVsCPU == 15) {
-                           document.getElementById("CPUSays").innerHTML = 'Airialle says "Whateverrrrrrrrr gg."'
-                           var myTimeout = setTimeout(function () {
-                              document.getElementById("CPUSays").innerHTML = ""
-                           }, 10000)
-
-                        }
-            }
+            
 
 
 
